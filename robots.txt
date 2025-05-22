@@ -1,0 +1,12 @@
+# Permitir a todos los bots rastrear el sitio
+User-agent: *
+Disallow:
+
+# Bloquear la carpeta templates para que no sea indexada
+Disallow: /templates/
+
+# Bloquear la carpeta admin (si existe)
+Disallow: /admin/
+
+# Permitir el acceso a todos los demás recursos
+Allow: /

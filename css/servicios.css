@@ -1,0 +1,177 @@
+/* Tipografía responsiva y coherente */
+body, .servicios-header, .intro-servicios, .cuadro-servicio, .textoCuadro, .btn-servicios {
+    font-family: 'Rubik', 'Open Sans', Arial, sans-serif;
+}
+main{
+    background-color: #fdb00a;
+    padding: 90px 0px 40px 0px;    
+}
+.servicios-header {
+    background: linear-gradient(to top, rgba(253, 177, 13, 0.3), rgba(234, 110, 16, 0.7));
+    background-size: 200% 200%;
+    background-position: top;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px #be640422;
+    padding: 36px 18px 28px 18px;
+    margin-bottom: 40px;
+}
+.titulo-servicios {
+    color: #000000;
+    font-size: clamp(1.7rem, 5vw, 2.6rem);
+    font-weight: 800;
+    margin-bottom: 18px;
+    letter-spacing: 0.045em;
+    text-shadow: 0 2px 8px #fdb00a22;
+}
+
+.intro-servicios {
+    color: #74420f;
+    font-size: clamp(1.05rem, 2.5vw, 1.22rem);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cuadro-servicio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(253, 177, 13, 0.3), rgba(234, 110, 16, 0.7));
+    background-size: 200% 200%;
+    background-position: top;
+    border-radius: 15px;
+    padding: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+    min-height: 275px;
+    transition: background-position 1s ease;
+    transition: all 0.3s ease;
+    margin-bottom: 0 !important; /* Elimina el margin-bottom si lo hay */
+}
+.cuadro-servicio:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+    background-position: bottom;
+}
+
+.ImagenCuadro {
+    width: 54px;
+    margin-bottom: 18px;
+}
+
+.cuadro-servicio h2 {
+    color: #000000;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.03em;
+}
+
+.textoCuadro {
+    width: 100%;
+    color: #2d1a00;
+    font-size: clamp(1rem, 2vw, 1.13rem);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+.servicios-contacto{
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+}
+.servicios-contacto h3 {
+    color: #000000;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+}
+
+.servicios-contacto p {
+    color: #74420f;
+    font-size: clamp(1rem, 2vw, 1.13rem);
+    margin-bottom: 18px;
+}
+
+.btn-servicios {
+    display: flex;
+    background: linear-gradient(90deg, #fdb00a 0%, #be6404 100%);
+    color: #000000;
+    border-radius: 12px;
+    padding: 13px 40px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: clamp(1rem, 2vw, 1.13rem);
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 10px #be640433;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s, color 0.2s;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-servicios:hover {
+    background: linear-gradient(90deg, #be6404 0%, #fdb00a 100%);
+    color: #fff;
+    transform: scale(1.04);
+    box-shadow: 0 4px 18px #be640444;
+}
+
+.iconoContacto{
+    max-width: 35px;
+    padding-right: 8px;    
+}
+
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .cuadro-servicio {
+        margin-bottom: 24px;
+    }
+    .servicios-lista .row {
+        row-gap: 28px;
+        column-gap: 0;
+    }
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .servicios-header {
+        padding: 24px 8px 18px 8px;
+        border-radius: 10px;
+        max-width: 90%
+    }
+    .cuadro-servicio {
+        padding: 16px;
+        min-width: 0;
+    }
+    .servicios-lista .row {
+        row-gap: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .servicios-header {
+        padding: 22px 6vw 18px 6vw;
+        border-radius: 12px;
+        max-width: 90%;
+    }
+    .titulo-servicios {
+        font-size: clamp(1.2rem, 6vw, 1.7rem);
+    }
+    .intro-servicios {
+        font-size: clamp(0.98rem, 3vw, 1.08rem);
+    }
+}
