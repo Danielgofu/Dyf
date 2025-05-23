@@ -35,3 +35,5 @@ Dia 8: Organizacion del CSS(883 lineas a 697) y añadir loader.
 Dia 9: Añadir redes y comienzo de pagina de contacto.
 Dia 10: Continuar con el contacto y terminarlo. 
 Dia 11: Empezar con la pagina de equipo y servicios
+
+![alt text](image.png)
