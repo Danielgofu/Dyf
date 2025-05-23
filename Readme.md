@@ -34,5 +34,4 @@ Dia 7: Añadir apartados al main.
 Dia 8: Organizacion del CSS(883 lineas a 697) y añadir loader.
 Dia 9: Añadir redes y comienzo de pagina de contacto.
 Dia 10: Continuar con el contacto y terminarlo. 
-
-Porbar IAs para logo
+Dia 11: Empezar con la pagina de equipo y servicios

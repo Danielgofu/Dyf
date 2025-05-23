@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: {
                 trigger: el,
                 start: "top 85%",
-                toggleActions: "play none none reset"
+                end: "bottom 15%", // Añadido para animar al salir
+                toggleActions: "play none none reverse", // Reproduce y revierte al salir
             }
         });
     });
@@ -39,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: '.servicios-contacto',
             start: "top 90%",
-            toggleActions: "play none none reset"
+            end: "bottom 10%", // Añadido para animar al salir
+            toggleActions: "play none none reverse", // Reproduce y revierte al salir
         }
     });
 });

@@ -345,14 +345,6 @@ footer .logoCabezera:hover {
     animation: spin 1s linear infinite;
     margin-bottom: 10px;
 }
-.loader-text {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    text-align: center;
-    font-weight: 700;
-    text-shadow: 0 1px 4px #ffffffc2;
-}
 @keyframes spin {
     to { transform: rotate(360deg); }
 }

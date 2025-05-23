@@ -139,6 +139,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 toggleActions: "play none none reset", // Configuración de las acciones
             },
         });
+        // Animación para los cuadros del index
+        gsap.utils.toArray('.cuadro').forEach((cuadro, i) => {
+            gsap.from(cuadro, {
+                scrollTrigger: {
+                    trigger: cuadro,
+                    start: "top 85%",
+                    end: "bottom 15%", // Añadido para animar al salir
+                    toggleActions: "play none none reverse", // Reproduce y revierte al salir
+                },
+                opacity: 0,
+                y: 50, // Aparece desde abajo
+                duration: 0.6,
+                delay: i * 0.1, // Retraso entre cuadros
+                ease: "power2.out",
+            });
+        });
     }
 });
 

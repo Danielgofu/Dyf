@@ -36,9 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: "header",
             start: "top top",
-            toggleActions: "play none none none",
+            toggleActions: "play none none reverse", // Reproduce y revierte al salir
         },
     });
+
     // Animar las columnas del footer con un efecto de deslizamiento
     gsap.from("footer .col-12", {
         duration: 1,
@@ -49,7 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: "footer",
             start: "top 80%",
-            toggleActions: "play none none reset",
+            end: "bottom 20%", // Añadido para animar al salir
+            toggleActions: "play none none reverse", // Reproduce y revierte al salir
         },
     }); 
 });
