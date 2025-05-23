@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: "header",
             start: "top top",
-            toggleActions: "play none none reverse", // Reproduce y revierte al salir
+            toggleActions: "play none none none", // Reproduce y revierte al salir
         },
     });
 
