@@ -177,4 +177,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    document.querySelector('.contact-form').addEventListener('submit', function (event) {
+        const nombre = document.getElementById('nombre').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        if (!nombre || !email) {
+            event.preventDefault(); // Evita el envío del formulario
+            alert('Por favor, completa todos los campos obligatorios.');
+        }
+    });
 });
