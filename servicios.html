@@ -20,6 +20,7 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 <body>
     <!-- Loader -->
@@ -93,86 +94,115 @@
     </div>
     <!-- Main Content -->
     <main>
-        <section class="servicios-header text-center mb-5 col-lg-12 col-md-12 container">
-            <div class="row">
-                <h1 class="titulo-servicios">Servicios profesionales para comunidades, empresas y particulares</h1>
-                <p class="intro-servicios">
-                    En Dyf Telecomunicaciones llevamos más de 10 años ofreciendo soluciones integrales en telecomunicaciones, seguridad y mantenimiento. Nuestro equipo técnico está especializado en la instalación, reparación y modernización de sistemas para comunidades de vecinos, empresas y viviendas particulares.
-                    Trabajamos con primeras marcas y garantizamos una atención rápida, cercana y personalizada.
-                </p>
+        <!-- Hero Servicios -->
+        <div class="hero-servicios">
+            <picture>
+                <source srcset="img/hero-small.webp" media="(max-width: 480px)">
+                <source srcset="img/hero-medium.webp" media="(max-width: 768px)">
+                <source srcset="img/hero-large.webp" media="(max-width: 1200px)">
+                <source srcset="img/hero-xl.webp" media="(min-width: 1201px)">
+                <img src="img/hero-xl.webp" alt="Servicios Dyf Telecomunicaciones" class="hero-image">
+            </picture>
+            <div class="hero-overlay">
+                <h1 class="hero-title">Nuestros Servicios</h1>
+                <p class="hero-subtitle">Soluciones integrales en telecomunicaciones, seguridad y mantenimiento.</p>
+                <a href="#servicios-lista" class="btn-hero">Ver Servicios</a>
             </div>
-        </section>
-        <section class="servicios-lista container">
+        </div>
+        <section class="servicios-lista container" id="servicios-lista">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-12 col-lg-6 mb-4">
+                <div class="col-12 col-md-12 col-lg-12 mb-4">
                     <div class="cuadro-servicio shadow-sm text-start">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="img/iconoAntena.svg" alt="Antenas" class="ImagenCuadro me-3">
-                            <h2>Antenas y Televisión</h2>
-                        </div>
-                        <div class="textoCuadro">
-                            <ul>
-                                <li>Instalación y reparación de antenas TDT individuales y colectivas.</li>
-                                <li>Montaje y orientación de parabólicas para canales nacionales e internacionales.</li>
-                                <li>Solución de averías de señal, resintonización y adaptación a nuevas tecnologías.</li>
-                                <li>Instalación de amplificadores, repartidores y cableado para comunidades.</li>
-                                <li>Asesoramiento para la migración a sistemas digitales y HD.</li>
-                            </ul>
-                            <p class="mt-2"><strong>¿Problemas de señal o cortes en la TV?</strong> Nuestro servicio urgente localiza y soluciona la avería en el menor tiempo posible.</p>
+                        <div class="row">
+                                <div class="col-12 col-md-12 col-lg-6">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="img/iconoAntena.svg" alt="Antenas" class="ImagenCuadro me-3">
+                                    <h2>Antenas y Televisión</h2>
+                                </div>
+                                <div class="textoCuadro">
+                                    <ul>
+                                        <li>Instalación y reparación de antenas TDT individuales y colectivas.</li>
+                                        <li>Montaje y orientación de parabólicas para canales nacionales e internacionales.</li>
+                                        <li>Solución de averías de señal, resintonización y adaptación a nuevas tecnologías.</li>
+                                        <li>Instalación de amplificadores, repartidores y cableado para comunidades.</li>
+                                        <li>Asesoramiento para la migración a sistemas digitales y HD.</li>
+                                    </ul>
+                                    <p class="mt-2"><strong>¿Problemas de señal o cortes en la TV?</strong> Nuestro servicio urgente localiza y soluciona la avería en el menor tiempo posible.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6">
+                                <img src="img/antena.webp" alt="Instalación de antenas" class="img-fluid rounded">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-6 mb-4">
-                    <div class="cuadro-servicio shadow-sm text-start">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="img/iconoPortero.svg" alt="Porteros" class="ImagenCuadro me-3">
-                            <h2>Porteros automáticos y Videoporteros</h2>
-                        </div>
-                        <div class="textoCuadro">
-                            <ul>
-                                <li>Instalación y sustitución de porteros automáticos y videoporteros en comunidades y viviendas.</li>
-                                <li>Modernización de sistemas antiguos a videoportero digital o IP.</li>
-                                <li>Reparación de telefonillos, placas de calle, abrepuertas y cableado.</li>
-                                <li>Integración con sistemas de control de accesos y cámaras.</li>
-                                <li>Soluciones para accesibilidad: apertura sin llaves, llamada a móviles, etc.</li>
-                            </ul>
-                            <p class="mt-2"><strong>¿El portero no funciona?</strong> Reparamos cualquier marca y modelo, y te asesoramos para mejorar la seguridad de tu edificio.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-6 mb-4">
-                    <div class="cuadro-servicio shadow-sm text-start">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="img/iconoMantenimientoMain.svg" alt="Mantenimiento" class="ImagenCuadro me-3">
-                            <h2>Mantenimiento de comunidades</h2>
-                        </div>
-                        <div class="textoCuadro">
-                            <ul>
+                <div class="col-12 col-md-12 col-lg-12 mb-4">
+                    <!-- Sección: Mantenimiento de comunidades -->
+                    <section class="mantenimiento-comunidades">
+                        <img src="img/mantenimientoImagen.webp" alt="Mantenimiento de comunidades" class="mantenimiento-image" width="1920" height="1080" fetchpriority="high">
+                        <div class="mantenimiento-overlay">
+                            <h2 class="mantenimiento-title">Mantenimiento de comunidades</h2>
+                            <ul class="mantenimiento-lista">
                                 <li>Contratos de mantenimiento integral para comunidades de vecinos.</li>
                                 <li>Revisiones periódicas de antenas, porteros, sistemas de seguridad y electricidad.</li>
                                 <li>Atención prioritaria a averías y urgencias.</li>
                                 <li>Informes técnicos y asesoramiento para juntas de vecinos.</li>
-                                <li>Precios cerrados y sin sorpresas, adaptados a cada comunidad.</li>
+                                <li>Precios cerrados y sin sorpresas.</li>
                             </ul>
-                            <p class="mt-2"><strong>Olvídate de los problemas técnicos:</strong> nos encargamos de todo para que tu comunidad esté siempre conectada y segura.</p>
+                            <p class="mantenimiento-frase">
+                                <strong>Olvídate de los problemas técnicos:</strong> nos encargamos de todo para que tu comunidad esté siempre conectada y segura.
+                            </p>
+                            <a href="contacto.html" class="btn-solicitar">Solicitar información</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-12 col-md-12 col-lg-12 mb-4">
+                    <div class="cuadro-servicio shadow-sm text-start">
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-6">
+                                <img src="img/telefonillo.webp" alt="Instalación de porteros" class="img-fluid rounded">
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="img/iconoPortero.svg" alt="Porteros" class="ImagenCuadro me-3">
+                                    <h2>Porteros automáticos y Videoporteros</h2>
+                                </div>
+                                <div class="textoCuadro">
+                                    <ul>
+                                        <li>Instalación y sustitución de porteros automáticos y videoporteros en comunidades y viviendas.</li>
+                                        <li>Modernización de sistemas antiguos a videoportero digital o IP.</li>
+                                        <li>Reparación de telefonillos, placas de calle, abrepuertas y cableado.</li>
+                                        <li>Integración con sistemas de control de accesos y cámaras.</li>
+                                        <li>Soluciones para accesibilidad: apertura sin llaves, llamada a móviles, etc.</li>
+                                    </ul>
+                                    <p class="mt-2"><strong>¿El portero no funciona?</strong> Reparamos cualquier marca y modelo, y te asesoramos para mejorar la seguridad de tu edificio.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-6 mb-4">
+                <div class="col-12 col-md-12 col-lg-12 mb-4">
                     <div class="cuadro-servicio shadow-sm text-start">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="img/iconoOtros.svg" alt="Otros servicios" class="ImagenCuadro me-3">
-                            <h2>Seguridad, redes y soluciones tecnológicas</h2>
-                        </div>
-                        <div class="textoCuadro">
-                            <ul>
-                                <li>Instalación de cámaras de videovigilancia (CCTV) y alarmas conectadas.</li>
-                                <li>Montaje y configuración de redes WiFi, cableado estructurado y fibra óptica.</li>
-                                <li>Domótica, control de accesos y automatización de puertas y garajes.</li>
-                                <li>Soluciones eléctricas: iluminación LED, cuadros eléctricos, boletines y más.</li>
-                                <li>Proyectos a medida para empresas, oficinas y locales comerciales.</li>
-                            </ul>
-                            <p class="mt-2"><strong>¿Tienes una necesidad especial?</strong> Cuéntanos tu proyecto y te propondremos la mejor solución tecnológica.</p>
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-6">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="img/iconoOtros.svg" alt="Otros servicios" class="ImagenCuadro me-3">
+                                    <h2>Seguridad, redes y soluciones tecnológicas</h2>
+                                </div>
+                                <div class="textoCuadro">
+                                    <ul>
+                                        <li>Instalación de cámaras de videovigilancia (CCTV) y alarmas conectadas.</li>
+                                        <li>Montaje y configuración de redes WiFi, cableado estructurado y fibra óptica.</li>
+                                        <li>Domótica, control de accesos y automatización de puertas y garajes.</li>
+                                        <li>Soluciones eléctricas: iluminación LED, cuadros eléctricos, boletines y más.</li>
+                                        <li>Proyectos a medida para empresas, oficinas y locales comerciales.</li>
+                                    </ul>
+                                    <p class="mt-2"><strong>¿Tienes una necesidad especial?</strong> Cuéntanos tu proyecto y te propondremos la mejor solución tecnológica.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-6 align-self-center">
+                                <img src="img/camaraSeguridad.jpeg" alt="Otros servicios de telecomunicaciones" class="img-fluid rounded">
+                            </div>
                         </div>
                     </div>
                 </div>

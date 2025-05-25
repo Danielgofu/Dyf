@@ -4,7 +4,13 @@ body, .servicios-header, .intro-servicios, .cuadro-servicio, .textoCuadro, .btn-
 }
 main{
     background-color: #fdb00a;
-    padding: 90px 0px 40px 0px;    
+    padding: 70px 0px 40px 0px;    
+}
+.HeroServicios{
+    display: flex;
+}
+.imagenHero{
+    max-height: 900px;
 }
 .servicios-header {
     background: linear-gradient(to top, rgba(253, 177, 13, 0.3), rgba(234, 110, 16, 0.7));
@@ -40,7 +46,7 @@ main{
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to top, rgba(253, 177, 13, 0.3), rgba(234, 110, 16, 0.7));
+    background: linear-gradient(to top, rgb(253, 177, 13), rgb(234, 110, 16));
     background-size: 200% 200%;
     background-position: top;
     border-radius: 15px;
@@ -148,6 +154,9 @@ main{
 
 /* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {
+    main{
+        padding: 60px 0px 30px 0px;
+    }
     .servicios-header {
         padding: 24px 8px 18px 8px;
         border-radius: 10px;
@@ -173,5 +182,210 @@ main{
     }
     .intro-servicios {
         font-size: clamp(0.98rem, 3vw, 1.08rem);
+    }
+}
+
+/* Hero Servicios */
+.hero-servicios {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 30%; /* Ajustado para que el texto esté más abajo */
+    left: 0;
+    width: 100%;
+    height: 70%; /* Centrar mejor el contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fdb00a; /* Texto en naranja */
+    padding: 20px;
+}
+
+.hero-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 15px; /* Ajustado para mayor separación */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    color: #fdb00a; /* Título en naranja */
+}
+
+.hero-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 400;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin-bottom: 20px; /* Ajustado para mayor separación */
+    color: #fdb00a; /* Subtítulo en naranja */
+}
+
+/* Botón para desplazarse */
+.btn-hero {
+    margin-top: 25px; /* Ajustado para mayor separación */
+    background: #fdb00a; /* Fondo naranja */
+    color: #001f3f; /* Texto azul marino */
+    border-radius: 12px;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw, 1.13rem);
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.btn-hero:hover {
+    background: #e86e10; /* Fondo naranja más oscuro */
+    color: #ffffff; /* Texto blanco */
+    transform: scale(1.05);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Sección: Mantenimiento de comunidades */
+.mantenimiento-comunidades {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.mantenimiento-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen ocupe todo el contenedor */
+    object-position: center;
+}
+
+.mantenimiento-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #fdb00a; /* Texto en naranja */
+}
+
+.mantenimiento-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #e86e10; /* Texto en naranja */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.mantenimiento-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.8;
+}
+
+.mantenimiento-lista li {
+    margin-bottom: 10px;
+    color: #fdb00a; /* Texto en naranja */
+}
+
+.mantenimiento-frase {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #fdb00a; /* Color naranja para destacar */
+}
+
+.btn-solicitar {
+    display: inline-block;
+    background: linear-gradient(90deg, #fdb00a 0%, #e86e10 100%);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-solicitar:hover {
+    background: linear-gradient(90deg, #e86e10 0%, #fdb00a 100%);
+    transform: scale(1.05);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .hero-overlay {
+        height: 50%;
+    }
+
+    .btn-hero {
+        display: none; /* Oculta el botón en dispositivos pequeños */
+    }
+
+    .mantenimiento-overlay {
+        padding: 10px;
+    }
+
+    .mantenimiento-title {
+        font-size: clamp(1.5rem, 4vw, 2rem); /* Reduce el tamaño del título */
+    }
+
+    .mantenimiento-lista {
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Reduce el tamaño del texto */
+    }
+
+    .btn-solicitar {
+        padding: 10px 20px; /* Botón más compacto */
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-overlay {
+        height: 50%;
+    }
+
+    .btn-hero {
+        display: none; /* Oculta el botón en dispositivos muy pequeños */
+    }
+
+    .mantenimiento-title {
+        font-size: clamp(1.2rem, 5vw, 1.8rem); /* Reduce aún más el título */
+    }
+
+    .mantenimiento-lista {
+        font-size: clamp(0.8rem, 2vw, 1rem); /* Reduce el texto */
+    }
+
+    .btn-solicitar {
+        padding: 8px 16px; /* Botón más compacto */
     }
 }

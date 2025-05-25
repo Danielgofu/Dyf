@@ -24,16 +24,15 @@ Electricidad y alarma
 
 
 
-Dia 1: Header y footer.
-Dia 2: Sidebar y ayudar a instalar NAS.
-Dia 3: Carrusel y responsibidad.
-Dia 4: Comienzo del main.
-Dia 5: Retocar el sidebar y añadir mas elementos al main.
-Dia 6: Cambios en el sidebar.
-Dia 7: Añadir apartados al main.
-Dia 8: Organizacion del CSS(883 lineas a 697) y añadir loader.
-Dia 9: Añadir redes y comienzo de pagina de contacto.
-Dia 10: Continuar con el contacto y terminarlo. 
-Dia 11: Empezar con la pagina de equipo y servicios
-
-![alt text](image.png)
+9/05  Dia 1: Header y footer.
+12/05 Dia 2: Sidebar y ayudar a instalar NAS.
+13/05 Dia 3: Carrusel y responsibidad.
+14/05 Dia 4: Comienzo del main.
+15/05 Dia 5: Retocar el sidebar y añadir mas elementos al main.
+16/05 Dia 6: Cambios en el sidebar.
+19/05 Dia 7: Añadir apartados al main.
+20/05 Dia 8: Organizacion del CSS(883 lineas a 697) y añadir loader.
+21/05 Dia 9: Añadir redes y comienzo de pagina de contacto.
+22/05 Dia 10: Continuar con el contacto y terminarlo. 
+23/05 Dia 11: Empezar con la pagina de equipo y servicios
+26/05 Dia 12: Terminar pagina servicios
