@@ -81,7 +81,7 @@ main {
     padding: 30px;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #e69a08;
+    background-color: #e69808b6;
 }
 .cuadro {
     width: 100%;
@@ -170,18 +170,50 @@ main {
 
 .tituloElegirnos {
     font-family: 'Rubik', sans-serif;
-    font-size: 2rem;
+    font-size: 2rem; /* Tamaño base */
     font-weight: 700;
-    color: #2c3e50; /* Azul oscuro para contraste */
+    color: #2c3e50; /* Azul oscuro */
     margin-bottom: 10px;
 }
 
 .decoracionSubrayado {
-    width: 100px;
-    height: 5px;
+    width: 100px; /* Ancho base */
+    height: 5px; /* Altura base */
     background-color: #2c3e50; /* Azul oscuro */
     margin: 0 auto;
     border-radius: 2px;
+}
+
+/* Responsivo para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .contenedorElegirnos {
+        padding: 15px 0;
+    }
+
+    .tituloElegirnos {
+        font-size: 1.8rem; /* Reduce el tamaño del texto */
+    }
+
+    .decoracionSubrayado {
+        width: 80px; /* Reduce el ancho del subrayado */
+        height: 4px; /* Reduce la altura del subrayado */
+    }
+}
+
+/* Responsivo para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .contenedorElegirnos {
+        padding: 10px 0;
+    }
+
+    .tituloElegirnos {
+        font-size: 1.5rem; /* Reduce aún más el tamaño del texto */
+    }
+
+    .decoracionSubrayado {
+        width: 60px; /* Reduce más el ancho del subrayado */
+        height: 3px; /* Reduce más la altura del subrayado */
+    }
 }
 /*  ============  Opiniones y Ubicación ============  */
 .contenedorOpiniones {
