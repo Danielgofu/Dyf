@@ -85,19 +85,23 @@ main{
     display: flex;
     flex-direction: column;
     max-width: 90%;
+    margin: 0 auto; /* Centra el contenido */
+    padding: 20px; /* Añade espacio interno */
+    text-align: center; /* Asegura que el texto esté centrado */
 }
 .servicios-contacto h3 {
     color: #000000;
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Ajusta el tamaño del texto */
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     letter-spacing: 0.03em;
 }
 
 .servicios-contacto p {
     color: #74420f;
-    font-size: clamp(1rem, 2vw, 1.13rem);
-    margin-bottom: 18px;
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Ajusta el tamaño del texto */
+    margin-bottom: 20px;
+    line-height: 1.5; /* Mejora la legibilidad */
 }
 
 .btn-servicios {
@@ -107,10 +111,10 @@ main{
     background: linear-gradient(90deg, #fdb00a, #e86e10);
     color: #ffffff;
     border-radius: 50px;
-    padding: 15px 50px;
+    padding: 12px 40px; /* Ajusta el tamaño del botón */
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Ajusta el tamaño del texto */
     letter-spacing: 0.05em;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
@@ -311,7 +315,6 @@ main{
 .mantenimiento-lista {
     list-style: none;
     padding: 0;
-    margin: 0 0 20px 0;
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     line-height: 1.8;
 }

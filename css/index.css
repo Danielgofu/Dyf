@@ -81,7 +81,7 @@ main {
     padding: 30px;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #e69808b6;
+    background-color: #fdb00a;
 }
 .cuadro {
     width: 100%;
@@ -183,6 +183,50 @@ main {
     margin: 0 auto;
     border-radius: 2px;
 }
+.colaboradores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #e69a08; /* Fondo blanco */
+}
+.tituloPatrocinadores {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50; /* Azul oscuro */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.decoracionSubrayadoPatrocinadores {
+    width: 80px;
+    height: 4px;
+    background-color: #2c3e50; /* Naranja */
+    margin: 0 auto 20px auto;
+    border-radius: 2px;
+}
+
+.fotosPatrocinadores {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Alineación vertical */
+}
+
+.fotosPatrocinadores .imagenPatrocinador {
+    max-width: 150px; /* Tamaño uniforme */
+    max-height: 100px; /* Altura fija para alinear */
+    object-fit: contain; /* Mantener proporciones */
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.fotosPatrocinadores .imagenPatrocinador:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    opacity: 1; /* Aumentar opacidad */
+}
 
 /* Responsivo para pantallas medianas (tablets) */
 @media (max-width: 768px) {
@@ -197,6 +241,11 @@ main {
     .decoracionSubrayado {
         width: 80px; /* Reduce el ancho del subrayado */
         height: 4px; /* Reduce la altura del subrayado */
+    }
+
+    .fotosPatrocinadores .imagenPatrocinador {
+        width: 120px; /* Reducir tamaño en tablets */
+        height: 80px;
     }
 }
 
@@ -213,6 +262,11 @@ main {
     .decoracionSubrayado {
         width: 60px; /* Reduce más el ancho del subrayado */
         height: 3px; /* Reduce más la altura del subrayado */
+    }
+
+    .fotosPatrocinadores .imagenPatrocinador {
+        width: 100px; /* Reducir tamaño en móviles */
+        height: 70px;
     }
 }
 /*  ============  Opiniones y Ubicación ============  */

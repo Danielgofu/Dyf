@@ -155,6 +155,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: "power2.out",
             });
         });
+        // Animar el contenedor de patrocinadores
+        gsap.from(".fotosPatrocinadores", {
+            duration: 1, // Duración de la animación
+            y: 50, // Desplazamiento inicial hacia abajo
+            opacity: 0, // Comienza invisible
+            ease: "power2.out", // Suavizado
+            scrollTrigger: {
+                trigger: ".fotosPatrocinadores", // Activa la animación cuando el contenedor es visible
+                start: "top 85%", // Inicia la animación cuando el contenedor está al 85% de la pantalla
+                toggleActions: "play none none reset", // Configuración de las acciones
+            },
+        });
+
+        // Animar cada imagen dentro del contenedor de patrocinadores
+        gsap.utils.toArray('.fotosPatrocinadores .imagenPatrocinador').forEach((imagen, i) => {
+            gsap.from(imagen, {
+                scrollTrigger: {
+                    trigger: ".fotosPatrocinadores", // Activa la animación cuando el contenedor es visible
+                    start: "top 85%", // Inicia la animación cuando el contenedor está al 85% de la pantalla
+                    toggleActions: "play none none reset", // Configuración de las acciones
+                },
+                opacity: 0, // Comienza invisible
+                y: 30, // Aparece desde abajo
+                duration: 0.6, // Duración de la animación
+                delay: i * 0.2, // Retraso progresivo entre imágenes
+                ease: "power2.out", // Suavizado
+            });
+        });
     }
 });
 
