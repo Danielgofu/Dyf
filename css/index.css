@@ -8,7 +8,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 40px 0px 40px 0px;
+    padding: 40px 0px 0px 0px;
 }
 .carousel {
     width: 100%;
@@ -247,6 +247,20 @@ main {
         width: 120px; /* Reducir tamaño en tablets */
         height: 80px;
     }
+
+    .contenedorTextoUbicacion {
+        padding: 15px 20px; /* Reduce el padding */
+        text-align: center;
+    }
+
+    .iframe-mapa {
+        height: 300px; /* Reduce la altura del mapa */
+    }
+
+    .textoUbicacion span {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        line-height: 1.5; /* Ajusta el espaciado entre líneas */
+    }
 }
 
 /* Responsivo para pantallas pequeñas (móviles) */
@@ -268,48 +282,28 @@ main {
         width: 100px; /* Reducir tamaño en móviles */
         height: 70px;
     }
+
+    .contenedorTextoUbicacion {
+        padding: 10px 15px; /* Reduce aún más el padding */
+    }
+
+    .iframe-mapa {
+        height: 250px; /* Reduce más la altura del mapa */
+    }
+
+    .textoUbicacion span {
+        font-size: 0.8rem; /* Reduce el tamaño del texto */
+    }
+
+    .imagenUbicacion {
+        max-width: 40px; /* Reduce el tamaño del icono */
+    }
 }
-/*  ============  Opiniones y Ubicación ============  */
-.contenedorOpiniones {
+/*  ============ Ubicación ============  */
+.contenedorUbicacion {
     width: 100%;
-    height: auto;
     display: flex;
-    padding: 30px;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.cuadroUbicacion {
-    width: 100%;
-    height: auto;
-    min-height: 350px;
-    background: linear-gradient(to top, rgba(253, 177, 13, 0.3), rgba(234, 110, 16, 0.7));
-    background-size: 200% 200%;
-    background-position: top;
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-    transition: background-position 1s ease;
-    transition: all 0.3s ease;
-}
-.cuadroUbicacion:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.3);
-    background-position: bottom;
-}
-.cuadroUbicacion:hover * {
-    transform: scale(1.001);
-    transition: transform 0.3s ease;
-}
-.textoUbicacion {
-    font-family: 'Rubik', sans-serif;
-    font-size: auto;
-    color: #000000;
-    text-align: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-direction: column;
 }
 .imagenUbicacion {
     width: 100%;
@@ -318,43 +312,25 @@ main {
     max-width: 50px;
     align-self: center;
 }
-.lado1Ubicacion {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 0px 40px 0px 40px;
-}
-.iconoFlechaMain {
-    max-width: 20px;
-    align-self: center;
-}
-.lado2Ubicacion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 .iframe-mapa {
     width: 100%;
-    height: 300px;
+    height: 500px;
     border: none;
-    border-radius: 10px;
-    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.contenedorTextoUbicacion{
+    padding: 20px 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 /*  ============  Responsivo  ============  */
 @media (max-width: 768px) {
     /* Main y Carrusel */
     main {
-        padding: 60px 0px 40px 0px;
+        padding: 60px 0px 0px 0px;
     }
     .iframe-container {
         height: 300px;
@@ -378,7 +354,7 @@ main {
     main {
         margin: 0 !important;
         width: 100vw;
-        padding: 50px 0px 40px 0px;
+        padding: 50px 0px 0px 0px;
     }
     .iframe-container {
         height: 250px;

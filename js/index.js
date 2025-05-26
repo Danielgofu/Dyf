@@ -183,6 +183,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: "power2.out", // Suavizado
             });
         });
+
+        // Animar el contenido de contenedorTextoUbicacion
+        gsap.from(".contenedorTextoUbicacion", {
+            scrollTrigger: {
+                trigger: ".contenedorTextoUbicacion",
+                start: "top 85%", // Inicia la animación cuando el contenedor está al 85% de la pantalla
+                toggleActions: "play none none reset", // Configuración de las acciones
+            },
+            opacity: 0, // Comienza invisible
+            y: 50, // Aparece desde abajo
+            duration: 1, // Duración de la animación
+            ease: "power2.out", // Suavizado
+        });
+
+        // Animar el iframe del mapa
+        gsap.from(".iframe-mapa", {
+            scrollTrigger: {
+                trigger: ".iframe-mapa",
+                start: "top 85%", // Inicia la animación cuando el iframe está al 85% de la pantalla
+                toggleActions: "play none none reset", // Configuración de las acciones
+            },
+            opacity: 0, // Comienza invisible
+            scale: 0.9, // Aparece con un tamaño reducido
+            duration: 1, // Duración de la animación
+            ease: "power2.out", // Suavizado
+        });
     }
 });
 
