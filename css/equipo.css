@@ -3,7 +3,7 @@ main {
     background-color: #f7b500; /* Un tono más suave de naranja */
     display: flex;
     flex-direction: column;
-    padding: 100px 20px 40px 20px; /* Más espacio en los lados */
+    padding: 120px 20px 40px 20px; /* Más espacio en los lados */
     margin: 0 auto; /* Centrar el contenido */
 }
 .valores{

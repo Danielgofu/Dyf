@@ -4,7 +4,7 @@ body, .servicios-header, .intro-servicios, .cuadro-servicio, .textoCuadro, .btn-
 }
 main{
     background-color: #fdb00a;
-    padding: 70px 0px 40px 0px;    
+    padding: 90px 0px 40px 0px;    
 }
 .HeroServicios{
     display: flex;

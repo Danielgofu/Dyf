@@ -40,10 +40,55 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 30px;
+    flex-direction: column;
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
     color: #fff;
+}
+.barraMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 30px;
+    width: 100%;
+}
+.barraSuperior{
+    background-color: #34495e;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+.CorreoYTelefono{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    padding-left: 35px;
+}
+.correo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.telefono{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.CorreoYTelefono a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.redes{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 35px;
 }
 .logoCabezera {
     max-height: 50px;
@@ -397,6 +442,9 @@ footer .logoCabezera:hover {
     }
     footer ul li a {
         font-size: 14px;
+    }
+    .barraSuperior {
+        display: none;
     }
 }
 @media (max-width: 480px) {
