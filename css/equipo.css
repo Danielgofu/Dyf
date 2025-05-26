@@ -10,9 +10,6 @@ main {
     min-height: 90%;
 }
 .valores-equipo {
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to top, rgba(255, 223, 186, 0.3), rgba(255, 159, 64, 0.7)); /* Degradado más claro */
     height: 100%; /* Asegura que ocupen toda la altura */
     display: flex;
@@ -49,13 +46,12 @@ main {
 }
 .testimonios-equipo {
     background: linear-gradient(to bottom, #f7c04a, #fdb00a); /* Degradado cálido */
-    padding: 40px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #333;
     border: 2px solid #d97706;
-
 }
 
 .testimonios-equipo h3 {
@@ -86,6 +82,10 @@ main {
     margin-bottom: 15px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonio-imagen:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    transition: transform 0.3s ease;
 }
 
 .testimonio-texto {
@@ -263,7 +263,7 @@ main {
 
 /* Hover para el botón */
 .equipo-contacto .btn:hover {
-    background-color: #ff9b18; /* Cambia el color del botón */
+    background-color: #e86e10; /* Cambia el color del botón */
     color: #fff; /* Asegura que el texto siga siendo legible */
     transform: scale(1.01); /* Aumenta ligeramente el tamaño */
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -286,7 +286,7 @@ main {
 }
 
 .logo-contacto{
-    max-width: 400px;
+    max-width: 350px;
     align-self: center;
 }
 
