@@ -55,16 +55,8 @@ main{
     align-items: center;
     box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
     min-height: 275px;
-    transition: background-position 1s ease;
-    transition: all 0.3s ease;
     margin-bottom: 0 !important; /* Elimina el margin-bottom si lo hay */
 }
-.cuadro-servicio:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
-    background-position: bottom;
-}
-
 .ImagenCuadro {
     width: 54px;
     margin-bottom: 18px;
@@ -249,14 +241,6 @@ main{
     font-size: clamp(1rem, 2vw, 1.13rem);
     letter-spacing: 0.04em;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
-}
-
-.btn-hero:hover {
-    background: #e86e10; /* Fondo naranja más oscuro */
-    color: #ffffff; /* Texto blanco */
-    transform: scale(1.05);
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 }
 
 /* Sección: Mantenimiento de comunidades */
@@ -332,12 +316,6 @@ main{
     text-decoration: none;
     font-weight: 700;
     font-size: clamp(1rem, 2vw, 1.2rem);
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.btn-solicitar:hover {
-    background: linear-gradient(90deg, #e86e10 0%, #fdb00a 100%);
-    transform: scale(1.05);
 }
 
 /* Ajustes responsivos */
