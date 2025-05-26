@@ -24,10 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Animaciones con GSAP y ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animar el header
     gsap.from("header", {
         duration: 1,
         y: -50,
@@ -36,11 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: "header",
             start: "top top",
-            toggleActions: "play none none none", // Reproduce y revierte al salir
+            toggleActions: "play none none none",
         },
     });
 
-    // Animar las columnas del footer con un efecto de deslizamiento
     gsap.from("footer .col-12", {
         duration: 1,
         y: 50,
@@ -50,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: "footer",
             start: "top 80%",
-            end: "bottom 20%", // Añadido para animar al salir
-            toggleActions: "play none none reverse", // Reproduce y revierte al salir
+            end: "bottom 20%",
+            toggleActions: "play none none reverse", 
         },
     }); 
 });
