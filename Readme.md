@@ -36,3 +36,4 @@ Electricidad y alarma
 22/05 Dia 10: Continuar con el contacto y terminarlo. 
 23/05 Dia 11: Empezar con la pagina de equipo y servicios
 26/05 Dia 12: Terminar pagina servicios
+27/05 Dia 13: Hacer pagina de mantenimiento

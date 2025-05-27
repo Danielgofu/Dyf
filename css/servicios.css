@@ -6,9 +6,6 @@ main{
     background-color: #fdb00a;
     padding: 90px 0px 40px 0px;    
 }
-.HeroServicios{
-    display: flex;
-}
 .imagenHero{
     max-height: 900px;
 }
