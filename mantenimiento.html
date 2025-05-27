@@ -17,6 +17,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/mantenimiento.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 </head>
 <body>
     <!-- Loader -->
@@ -121,107 +125,143 @@
 
     <!-- Main Content -->
     <main>
-        <section class="container py-5">
-            <h1 class="text-center mb-4">Aqui va la pagina de mantenimiento esto es un texto para probar </h1>
-            <p class="text-center mb-5">
-                Ofrecemos servicios de mantenimiento integral para comunidades y empresas, asegurando el correcto funcionamiento de sus instalaciones.
-            </p>
-            <div class="row">
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Mantenimiento de Antenas</h5>
-                            <p class="card-text">
-                                Revisiones periódicas y reparación de antenas colectivas e individuales para garantizar una señal de calidad.
-                            </p>
-                        </div>
+        <section class="hero-section text-center text-white py-5">
+            <div class="container">
+                <h1 class="display-4">Servicios de Mantenimiento</h1>
+                <p class="lead">
+                    Instalamos antenas individuales y colectivas. Antenas Parabólicas. Ofrecemos servicios de Instalación, Reparación y Mantenimiento de Antenas, Porteros Automáticos, Vídeoporteros, Electricidad y Urgencias 24h.
+                </p>
+            </div>
+        </section>
+
+        <section class="about-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Especialistas en Servicios de Mantenimiento</h2>
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-6 px-4">
+                        <p>
+                            Somos especialistas en Servicios de Mantenimiento para Comunidades de Vecinos. Si tu comunidad está pensando en contratar a un profesional para realizar el mantenimiento de sus instalaciones, no lo dudes, ponte en contacto con nosotros.
+                        </p>
+                        <p>
+                            Te haremos un estudio personalizado de los servicios que necesita tu comunidad y te presentaremos una propuesta que incluye instalación, reparación y mantenimiento de los servicios contratados.
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <img src="img/mantenimientoServicio.webp" alt="Mantenimiento Comunidad" class="img-fluid rounded shadow">
                     </div>
                 </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Porteros Automáticos</h5>
-                            <p class="card-text">
-                                Instalación, reparación y mantenimiento de porteros automáticos y videoporteros para comunidades y empresas.
-                            </p>
+            </div>
+        </section>
+
+        <section class="services-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">¿Qué ofrecemos?</h2>
+                <p class="text-center mb-5">
+                    Contratos de Mantenimiento para Comunidades. Todos nuestros contratos incluyen Instalación, Reparación y Mantenimiento de los Servicios que ofrecemos.
+                </p>
+                <div class="row text-center">
+                    <div class="col-12 col-lg-3 col-md-12 mb-4">
+                        <div class="service-card p-4 shadow-sm">
+                            <h5>Mantenimiento Antenas</h5>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Sistemas de Seguridad</h5>
-                            <p class="card-text">
-                                Mantenimiento de sistemas de videovigilancia, alarmas y control de accesos para garantizar la seguridad de su propiedad.
-                            </p>
+                    <div class="col-12 col-lg-3 col-md-12 mb-4">
+                        <div class="service-card p-4 shadow-sm">
+                            <h5>Mantenimiento Porteros y Vídeoporteros</h5>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Electricidad</h5>
-                            <p class="card-text">
-                                Servicios de mantenimiento eléctrico para comunidades y empresas, asegurando el correcto funcionamiento de sus instalaciones.
-                            </p>
+                    <div class="col-12 col-lg-3 col-md-12 mb-4">
+                        <div class="service-card p-4 shadow-sm">
+                            <h5>Mantenimiento Electricidad</h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 col-md-12 mb-4">
+                        <div class="service-card p-4 shadow-sm">
+                            <h5>Urgencias 24 horas</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Preguntas Frecuentes -->
-        <section class="container py-5">
-            <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
-            <p class="text-center mb-5">
-                Resolvemos las dudas más comunes sobre nuestros servicios de mantenimiento. Si tienes más preguntas, no dudes en contactarnos.
-            </p>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faq1">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                            ¿Qué incluye el servicio de mantenimiento?
-                        </button>
-                    </h2>
-                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Nuestro servicio de mantenimiento incluye revisiones periódicas, reparación de averías, y soporte técnico para antenas, porteros automáticos, sistemas de seguridad y electricidad.
+        <section class="contact-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Personaliza tu Contrato</h2>
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-6 px-4 text-center">
+                        <img src="img/contactoFoto.jpg" alt="Personaliza tu Contrato" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-sm-12 col-lg-6 px-4 d-flex flex-column justify-content-center py-4">
+                        <p>
+                            En tu Contrato de Mantenimiento podrás incluir cualquiera de los servicios que ofrecemos. Nosotros te damos la posibilidad de personalizarlo de acuerdo a las necesidades reales de tu Comunidad.
+                        </p>
+                        <p>
+                            Tras una evaluación inicial, te haremos una propuesta acorde a las necesidades del edificio. Puedes consultar nuestro catálogo de Servicios aquí.
+                        </p>
+                        <div class="text-center mt-4">
+                            <a href="contacto.html" class="btn btn-primary btn-lg">Contáctanos</a>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faq2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            ¿Con qué frecuencia se realizan las revisiones?
-                        </button>
-                    </h2>
-                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Las revisiones se realizan de forma mensual, trimestral o según las necesidades específicas de cada cliente.
+            </div>
+        </section>
+
+        <!-- FAQ / Respuestas rápidas -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="text-center">Respuestas rápidas</h2>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-6">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        ¿Puedo personalizar los servicios contratados?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Sí, puedes elegir los servicios que realmente necesita tu comunidad y adaptarlos a tus necesidades.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        ¿Cómo solicito presupuesto?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Puedes solicitar presupuesto a través del formulario de contacto o llamando al 916 01 84 94.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        ¿En cuánto tiempo atendéis una urgencia?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Atendemos urgencias en 48h labroables aproximadamente, los 365 días del año, para que tu comunidad nunca se quede sin servicio.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faq3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            ¿Qué sucede si hay una avería urgente?
-                        </button>
-                    </h2>
-                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Contamos con un servicio de atención prioritaria para resolver averías urgentes en el menor tiempo posible.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faq4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            ¿Puedo personalizar el servicio de mantenimiento?
-                        </button>
-                    </h2>
-                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Sí, adaptamos nuestros servicios a las necesidades específicas de cada cliente, ya sea una comunidad de vecinos o una empresa.
+                    <div class="col-lg-6 mt-5 mt-lg-0 d-flex flex-column align-items-center">
+                        <div class="faq-extra-box text-center">
+                            <div class="faq-extra-icon mb-3">
+                                <img src="img/iconoMantenimientoMain.svg" alt="FAQ Mantenimiento">
+                            </div>  
+                            <h5 class="faq-extra-title mb-2">¿Tienes otra duda?</h5>
+                            <p class="faq-extra-text mb-3">
+                                Si no encuentras la respuesta que buscas,<br>
+                                escríbenos y te responderemos lo antes posible.
+                            </p>
+                            <a href="contacto.html" class="btn btn-primary faq-extra-btn">Enviar consulta</a>
                         </div>
                     </div>
                 </div>
