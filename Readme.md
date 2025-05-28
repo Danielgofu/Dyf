@@ -37,3 +37,4 @@ Electricidad y alarma
 23/05 Dia 11: Empezar con la pagina de equipo y servicios
 26/05 Dia 12: Terminar pagina servicios
 27/05 Dia 13: Hacer pagina de mantenimiento
+28/05 Dia 14: Modificar pagina de equipo

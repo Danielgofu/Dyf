@@ -20,8 +20,9 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <!-- Precarga imagen -->
-    <link rel="preload" as="image" href="img/DyfEquipo.webp" imagesrcset="img/1-xl.webp 1280w, img/1-large.webp 1280w" imagesizes="100vw">
+    <link rel="preload" as="image" href="img/DyfEquipoHD.avif" imagesrcset="img/1-xl.webp 1280w, img/1-large.webp 1280w" imagesizes="100vw">
 
 </head>
 <body>
@@ -124,100 +125,128 @@
             </ul>
         </div>
     </div>
-
     <!-- Main Content -->
     <main>
-        <!-- Parte superior: Foto del equipo y valores -->
-        <div class="row">
-            <!-- Contenedor de la imagen -->
-            <div class="col-12 col-lg-6 mb-4">
-                <div class="contenedor-imagen">
-                    <h2 class="titulo-imagen mb-3">Nuestro Equipo</h2>
-                    <img src="img/DyfEquipo.webp" alt="Equipo Dyf" class="imagenEquipo" loading="lazy">
-                </div>
-            </div>
-            <!-- Contenedor de valores -->
-            <div class="col-12 col-lg-6 mb-4">
-                <section class="valores-equipo">
-                    <h2>Nuestros Valores</h2>
-                    <div class="row">
-                        <div class="col-12 col-md-4 text-center">
-                            <div class="valor-item">
-                                <div class="valor-icono mb-2">
-                                    <img src="img/iconoInnovacion.svg" alt="Innovación" class="icono-valor">
-                                </div>
-                                <h3>Innovación</h3>
-                                <p>Siempre buscamos soluciones tecnológicas avanzadas para nuestros clientes.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 text-center">
-                            <div class="valor-item">
-                                <div class="valor-icono mb-2">
-                                    <img src="img/iconoEquipo2.svg" alt="Trabajo en Equipo" class="icono-valor">
-                                </div>
-                                <h3>Trabajo en Equipo</h3>
-                                <p>Creemos que la colaboración es clave para alcanzar el éxito.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 text-center">
-                            <div class="valor-item">
-                                <div class="valor-icono mb-2">
-                                    <img src="img/iconoCompromiso.svg" alt="Compromiso" class="icono-valor">
-                                </div>
-                                <h3>Compromiso</h3>
-                                <p>Nos dedicamos a ofrecer un servicio excepcional en cada proyecto.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 text-center">
-                            <div class="valor-item">
-                                <div class="valor-icono mb-2">
-                                    <img src="img/iconoCalidad.svg" alt="Calidad" class="icono-valor">
-                                </div>
-                                <h3>Calidad</h3>
-                                <p>Nos esforzamos por ofrecer servicios de la más alta calidad para nuestros clientes.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 text-center">
-                            <div class="valor-item">
-                                <div class="valor-icono mb-2">
-                                    <img src="img/iconoSostenibilidad.svg" alt="Sostenibilidad" class="icono-valor">
-                                </div>
-                                <h3>Sostenibilidad</h3>
-                                <p>Promovemos prácticas responsables para cuidar el medio ambiente.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        <div class="contenedorHero">
+            <img src="img/DyfEquipoHD.avif" alt="imagenEquipo" class="imagenEquipo">
+            <div class="fondoDifuminado"></div>
+            <div class="heroTexto">
+                <h1 class="hero-title">Nuestro equipo</h1>
+                <p class="hero-subtitle">En Dyf Telecomunicaciones, nuestro equipo es el corazón de nuestra empresa.</p>
+                <a href="#valores" class="btn-hero" id="btnHero">Conócenos mejor</a>
             </div>
         </div>
-
-        <!-- Parte inferior: Contacto y Testimonios -->
-        <div class="row">
-            <!-- Contenedor de testimonios -->
-            <div class="col-12 col-lg-6 mb-4">
-                <section class="testimonios-equipo">
-                    <h3>Lo que dice nuestro equipo</h3>
-                    <div class="testimonios-contenido">
-                        <div class="testimonio">
-                            <img src="img/iconoTestimonio1.png" alt="Ana García" class="testimonio-imagen">
-                            <p class="testimonio-texto">"Trabajar en Dyf Telecomunicaciones me ha permitido crecer profesionalmente y contribuir a proyectos innovadores."</p>
-                            <p class="testimonio-autor">- Alba García, Ingeniera de Telecomunicaciones</p>
+        <div class="container-fluid fondoValores">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <!-- Carrusel de valores adaptado -->
+                    <section class="section" id="valores">
+                        <div class="title">
+                            <h2>Nuestros Valores</h2>
+                            <p>Los principios que guían cada decisión y cada proyecto</p>
                         </div>
-                        <div class="testimonio">
-                            <img src="img/iconoTestimonio2.png" alt="Carlos Martínez" class="testimonio-imagen">
-                            <p class="testimonio-texto">"Formar parte de este equipo es un orgullo. Aquí valoramos la calidad y la atención al cliente."</p>
-                            <p class="testimonio-autor">- Carlos Martínez, Técnico de Instalaciones</p>
+                        <div class="carousel-container">
+                            <button class="arrow-btn arrow-left" id="valores-left" aria-label="Anterior valor">
+                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"/>
+                              </svg>
+                            </button>
+                            <div class="carousel" id="valores-carousel">
+                            <div class="card">
+                                <img src="img/iconoInnovacion.svg" alt="Innovación" class="icono-valor">
+                                <h3>Innovación</h3>
+                                <p>Adoptamos las últimas tecnologías para ofrecer soluciones de vanguardia</p>
+                            </div>
+                            <div class="card">
+                                <img src="img/iconoCompromiso.svg" alt="Compromiso" class="icono-valor">
+                                <h3>Compromiso</h3>
+                                <p>Nos dedicamos completamente a cada proyecto y cliente</p>
+                            </div>
+                            <div class="card">
+                                <img src="img/iconoSostenibilidad.svg" alt="Sostenibilidad" class="icono-valor">
+                                <h3>Sostenibilidad</h3>
+                                <p>Trabajamos pensando en el futuro y el cuidado del medio ambiente</p>
+                            </div>
+                            <div class="card">
+                                <img src="img/iconoEquipo2.svg" alt="Trabajo en Equipo" class="icono-valor">
+                                <h3>Trabajo en Equipo</h3>
+                                <p>Juntos logramos más, nos apoyamos y crecemos unidos</p>
+                            </div>
+                            <div class="card">
+                                <img src="img/iconoCalidad.svg" alt="Excelencia" class="icono-valor">
+                                <h3>Excelencia</h3>
+                                <p>Buscamos la perfección en cada detalle de nuestro trabajo</p>
+                            </div>
+                            </div>
+                            <button class="arrow-btn arrow-right" id="valores-right" aria-label="Siguiente valor">
+                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 6 15 12 9 18"/>
+                              </svg>
+                            </button>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
-            <!-- Contenedor de contacto -->
-            <div class="col-12 col-lg-6 mb-4">
-                <section class="equipo-contacto">
-                    <img src="img/LogoGrandeSinFondo.svg" alt="Logo Dyf" class="logo-contacto">
-                    <h3>¿Quieres formar parte de nuestro equipo?</h3>
-                    <p>Estamos en constante búsqueda de talento. Si compartes nuestra pasión por las telecomunicaciones, ¡contáctanos!</p>
-                    <a href="contacto.html" class="btn btn-primary">Únete a nosotros</a>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Contenedor de testimonios -->
+                <div class="col-12 py-2 fondoTestimonios">
+                    <section class="testimonios-equipo">
+                        <h3 class="testimonios-titulo">Voces del Equipo</h3>
+                        <p class="testimonios-subtitulo">Escucha lo que nuestro equipo tiene que decir</p>
+                        <div class="testimonios-slider-container">
+                            <button class="arrow-btn arrow-left" id="testimonios-left" aria-label="Anterior testimonio">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"/>
+                                </svg>
+                            </button>
+                            <div class="testimonios-slider" id="testimonios-slider">
+                                <div class="testimonio-slide active">
+                                    <div class="testimonio-img-wrap">
+                                        <img src="img/iconoTestimonio1.png" alt="Ana García" class="testimonio-img">
+                                    </div>
+                                    <p class="testimonio-texto">"Trabajar en Dyf Telecomunicaciones me ha permitido crecer profesionalmente y contribuir a proyectos innovadores."</p>
+                                    <div class="testimonio-autor">
+                                        <strong>Alba García</strong><br>
+                                        <span>Ingeniera de Telecomunicaciones</span>
+                                    </div>
+                                </div>
+                                <div class="testimonio-slide">
+                                    <div class="testimonio-img-wrap">
+                                        <img src="img/iconoTestimonio2.png" alt="Carlos Martínez" class="testimonio-img">
+                                    </div>
+                                    <p class="testimonio-texto">"Formar parte de este equipo es un orgullo. Aquí valoramos la calidad y la atención al cliente."</p>
+                                    <div class="testimonio-autor">
+                                        <strong>Carlos Martínez</strong><br>
+                                        <span>Técnico de Instalaciones</span>
+                                    </div>
+                                </div>
+                                <!-- Añade más testimonios aquí si lo deseas -->
+                            </div>
+                            <button class="arrow-btn arrow-right" id="testimonios-right" aria-label="Siguiente testimonio">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 6 15 12 9 18"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="testimonios-dots" id="testimonios-dots"></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Contenedor de contacto -->
+                <!-- Nueva sección de contacto -->
+                <section class="equipo-contacto-nueva">
+                    <h2 class="contacto-titulo">
+                        ¿Te gustaría formar parte de nuestro equipo?
+                    </h2>
+                    <p class="contacto-desc">
+                        En DyF no solo buscamos empleados, buscamos compañeros de viaje. Personas que quieran crecer, aprender y hacer la diferencia cada día.
+                    </p>
+                    <a href="contacto.html" class="btn-contacto-nueva">Únete al equipo</a>
                 </section>
             </div>
         </div>
