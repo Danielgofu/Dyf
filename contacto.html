@@ -64,6 +64,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- Cache Control -->
     <meta http-equiv="Cache-Control" content="max-age=31536000" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0HLCH4XF58"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0HLCH4XF58');
+    </script>
   </head>
   <body>
     <!-- Loader -->
@@ -410,7 +423,11 @@
             name="_next"
             value="https://Danielgofu.github.io/Dyf/gracias.html"
           />
-          <input type="hidden" name="_token" value="TU_TOKEN_SECRETO" />
+          <input
+            type="hidden"
+            name="_token"
+            value="gDZe43v9TayUDDUpmQGDCfM2rQ4oJhXpcyPGOcEmgi0kHGP9xcs8RHQJavaDpFo7"
+          />
           <button type="submit" class="btn btn-primary w-100 contact-btn">
             <span class="btn-icon">
               <svg width="20" height="20" fill="#fff" viewBox="0 0 24 24">
@@ -659,5 +676,10 @@
     <script>
       var lazyLoadInstance = new LazyLoad();
     </script>
+    <div id="cookie-banner">
+      Utilizamos cookies para mejorar tu experiencia.
+      <button id="accept-cookies">Aceptar</button>
+      <a href="privacidad.html">Más información</a>
+    </div>
   </body>
 </html>

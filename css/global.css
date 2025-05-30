@@ -422,6 +422,78 @@ footer .logoCabezera:hover {
   opacity: 0;
   pointer-events: none;
 }
+/*  ============  Banner de cookies  ============  */
+#cookie-banner {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 18px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  z-index: 9999;
+  display: none;
+  text-align: center;
+  font-size: 1.05rem;
+  width: 65%;
+  min-width: 260px;
+  animation: cookies-fadein 0.7s;
+}
+@keyframes cookies-fadein {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+#cookie-banner button#accept-cookies {
+  margin-left: 18px;
+  background: #fdb00a;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  box-shadow: 0 2px 8px rgba(253, 176, 10, 0.08);
+}
+#cookie-banner button#accept-cookies:hover {
+  background: #be6404;
+  color: #fff;
+}
+#cookie-banner a {
+  color: #fdb00a;
+  margin-left: 18px;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+#cookie-banner a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  #cookie-banner {
+    padding: 12px 8px;
+    font-size: 0.98rem;
+    border-radius: 10px;
+    bottom: 12px;
+  }
+  #cookie-banner button#accept-cookies,
+  #cookie-banner a {
+    margin-left: 10px;
+    padding: 7px 12px;
+    font-size: 0.98rem;
+  }
+}
 /*  ============  Responsivo  ============  */
 @media (max-width: 768px) {
   /* Header */

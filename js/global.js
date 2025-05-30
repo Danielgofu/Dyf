@@ -5,6 +5,15 @@ window.addEventListener('load', () => {
     document.getElementById('loader-bg').style.display = 'none';
   }, 400);
 });
+// Cookies
+if (!localStorage.getItem('cookiesAccepted')) {
+  document.getElementById('cookie-banner').style.display = 'block';
+}
+document.getElementById('accept-cookies').onclick = function () {
+  localStorage.setItem('cookiesAccepted', 'yes');
+  document.getElementById('cookie-banner').style.display = 'none';
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.querySelector('.sidebar');
   const menuIcon = document.querySelector('.iconoMenu');
