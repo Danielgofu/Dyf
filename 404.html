@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Página no encontrada | DyF Telecomunicaciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:700,400&display=swap" rel="stylesheet">
+    <style>
+    body {
+      background: linear-gradient(135deg, #c75b0b 0%, #f7b500 100%);
+      color: #c75b0b;
+      font-family: 'Rubik', Arial, sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .error-container {
+      background: #fff;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(199,91,11,0.10);
+      padding: 48px 32px 36px 32px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      margin: 24px;
+      animation: fadeIn404 1s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes fadeIn404 {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .error-icon {
+      font-size: 4.5rem;
+      margin-bottom: 18px;
+      color: #f7b500;
+      display: inline-block;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #d96d1c;
+      letter-spacing: -2px;
+    }
+    .error-msg {
+      font-size: 1.18rem;
+      color: #a65c00;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+    .btn-404 {
+      color: #fff;
+      background: #d96d1c;
+      padding: 14px 40px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.13rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+      transition: background 0.2s, color 0.2s, transform 0.18s;
+      display: inline-block;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .btn-404:hover, .btn-404:focus {
+      background: #f7b500;
+      color: #c75b0b;
+      transform: scale(1.04);
+    }
+    @media (max-width: 600px) {
+      .error-container { padding: 28px 8px 22px 8px; border-radius: 16px;}
+      h1 { font-size: 2rem;}
+      .error-icon { font-size: 3rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-icon">🚧</div>
+    <h1>404</h1>
+    <div class="error-msg">
+      ¡Ups! La página que buscas no existe o ha sido movida.<br>
+      <small>Comprueba la URL o vuelve al inicio.</small>
+    </div>
+    <a href="index.html" class="btn-404">Volver al inicio</a>
+  </div>
+</body>
+</html>
