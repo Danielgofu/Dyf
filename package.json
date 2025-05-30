@@ -26,5 +26,8 @@
     "eslint": "^9.27.0",
     "prettier": "^3.5.3",
     "terser": "^5.40.0"
+  },
+  "dependencies": {
+    "sitemap": "^8.0.0"
   }
 }

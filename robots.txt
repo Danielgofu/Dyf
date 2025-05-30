@@ -10,3 +10,6 @@ Disallow: /admin/
 
 # Permitir el acceso a todos los demás recursos
 Allow: /
+
+# Sitemap
+Sitemap: https://danielgofu.github.io/Dyf/sitemap.xml
