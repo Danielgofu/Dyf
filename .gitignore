@@ -1,0 +1,23 @@
+# node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VSCode
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de producción (si usas una carpeta dist o build)
+dist/
+build/
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Otros
+.env

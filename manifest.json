@@ -1,0 +1,27 @@
+{
+  "name": "DyF Telecomunicaciones",
+  "short_name": "DyF",
+  "description": "Servicios profesionales de telecomunicaciones y mantenimiento para comunidades.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fdb00a",
+  "theme_color": "#e86e10",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "img/faviconDYF.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/faviconDYF.ico",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/faviconDYF.ico",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

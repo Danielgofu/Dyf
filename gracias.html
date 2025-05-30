@@ -1,162 +1,219 @@
 <!doctype html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>¡Gracias por tu mensaje! | Dyf Telecomunicaciones</title>
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/contacto.css">
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
     <style>
-        body {
-            background: linear-gradient(135deg, #fdb00a 0%, #be6404 100%);
-            min-height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            font-family: 'Rubik', 'Open Sans', Arial, sans-serif;
+      body {
+        background: linear-gradient(135deg, #fdb00a 0%, #be6404 100%);
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Rubik', 'Open Sans', Arial, sans-serif;
+      }
+      .gracias-container {
+        align-self: center;
+        min-height: 80vh;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .gracias-card {
+        background: #ffffffe0;
+        border-radius: 22px;
+        box-shadow:
+          0 8px 32px #be640422,
+          0 1.5px 0 #fdb00a;
+        padding: 48px 32px 38px 32px;
+        text-align: center;
+        max-width: 420px;
+        animation: pop-in 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        border: 2.5px solid #fdb00a;
+      }
+      .gracias-card .logo {
+        max-width: 150px;
+        margin-bottom: 22px;
+        animation: logo-pop 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+        filter: drop-shadow(0 2px 8px #fdb00a33);
+      }
+      .gracias-card h1 {
+        color: #be6404;
+        margin-bottom: 18px;
+        font-size: clamp(1.3rem, 4vw, 2.1rem);
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-shadow: 0 1px 8px #fdb00a22;
+      }
+      .gracias-card p {
+        color: #74420f;
+        font-size: clamp(1rem, 2.5vw, 1.18rem);
+        margin-bottom: 32px;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.03em;
+        font-weight: 600;
+      }
+      .volver {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 13px 40px;
+        background: linear-gradient(90deg, #fdb00a 0%, #be6404 100%);
+        color: #fffbe6;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: clamp(1rem, 2vw, 1.13rem);
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        box-shadow: 0 2px 10px #be640433;
+        transition:
+          background 0.2s,
+          transform 0.2s,
+          box-shadow 0.2s,
+          color 0.2s;
+        border: none;
+      }
+      .volver:hover {
+        background: linear-gradient(90deg, #be6404 0%, #fdb00a 100%);
+        color: #fff;
+        transform: scale(1.04);
+        box-shadow: 0 4px 18px #be640444;
+      }
+      .gracias-social {
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+      }
+      .gracias-social .icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #fdb00a 60%, #be6404 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fffbe6;
+        font-size: 1.7rem;
+        transition:
+          background 0.2s,
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 2px 8px #be640433;
+        cursor: pointer;
+      }
+      .gracias-social .icon:hover {
+        background: linear-gradient(135deg, #be6404 60%, #fdb00a 100%);
+        color: #fff;
+        transform: scale(1.13) rotate(-3deg);
+        box-shadow: 0 4px 18px #fdb00a44;
+      }
+      @keyframes pop-in {
+        0% {
+          opacity: 0;
+          transform: scale(0.7);
         }
-        .gracias-container {
-            align-self: center;
-            min-height: 80vh;
-            max-width: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        100% {
+          opacity: 1;
+          transform: scale(1);
         }
+      }
+      @keyframes logo-pop {
+        0% {
+          opacity: 0;
+          transform: scale(0.7);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @media (max-width: 600px) {
         .gracias-card {
-            background: #ffffffe0;
-            border-radius: 22px;
-            box-shadow: 0 8px 32px #be640422, 0 1.5px 0 #fdb00a;
-            padding: 48px 32px 38px 32px;
-            text-align: center;
-            max-width: 420px;
-            animation: pop-in 0.8s cubic-bezier(0.23,1,0.32,1);
-            border: 2.5px solid #fdb00a;
-        }
-        .gracias-card .logo {
-            max-width: 150px;
-            margin-bottom: 22px;
-            animation: logo-pop 1.2s cubic-bezier(0.23,1,0.32,1) both;
-            filter: drop-shadow(0 2px 8px #fdb00a33);
+          padding: 28px 8px 24px 8px;
+          max-width: 98vw;
         }
         .gracias-card h1 {
-            color: #be6404;
-            margin-bottom: 18px;
-            font-size: clamp(1.3rem, 4vw, 2.1rem);
-            font-weight: 800;
-            letter-spacing: 0.04em;
-            text-shadow: 0 1px 8px #fdb00a22;
+          font-size: 1.4rem;
         }
-        .gracias-card p {
-            color: #74420f;
-            font-size: clamp(1rem, 2.5vw, 1.18rem);
-            margin-bottom: 32px;
-            font-family: 'Open Sans', sans-serif;
-            letter-spacing: 0.03em;
-            font-weight: 600;
-        }
-        .volver {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 13px 40px;
-            background: linear-gradient(90deg, #fdb00a 0%, #be6404 100%);
-            color: #fffbe6;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: clamp(1rem, 2vw, 1.13rem);
-            font-weight: 800;
-            letter-spacing: 0.04em;
-            box-shadow: 0 2px 10px #be640433;
-            transition: background 0.2s, transform 0.2s, box-shadow 0.2s, color 0.2s;
-            border: none;
-        }
-        .volver:hover {
-            background: linear-gradient(90deg, #be6404 0%, #fdb00a 100%);
-            color: #fff;
-            transform: scale(1.04);
-            box-shadow: 0 4px 18px #be640444;
-        }
-        .gracias-social {
-            margin-top: 36px;
-            display: flex;
-            justify-content: center;
-            gap: 22px;
+        .gracias-card .logo {
+          max-width: 110px;
         }
         .gracias-social .icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #fdb00a 60%, #be6404 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fffbe6;
-            font-size: 1.7rem;
-            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 8px #be640433;
-            cursor: pointer;
+          width: 38px;
+          height: 38px;
+          font-size: 1.2rem;
         }
-        .gracias-social .icon:hover {
-            background: linear-gradient(135deg, #be6404 60%, #fdb00a 100%);
-            color: #fff;
-            transform: scale(1.13) rotate(-3deg);
-            box-shadow: 0 4px 18px #fdb00a44;
-        }
-        @keyframes pop-in {
-            0% { opacity: 0; transform: scale(0.7);}
-            100% { opacity: 1; transform: scale(1);}
-        }
-        @keyframes logo-pop {
-            0% { opacity: 0; transform: scale(0.7);}
-            100% { opacity: 1; transform: scale(1);}
-        }
-        @media (max-width: 600px) {
-            .gracias-card {
-                padding: 28px 8px 24px 8px;
-                max-width: 98vw;
-            }
-            .gracias-card h1 {
-                font-size: 1.4rem;
-            }
-            .gracias-card .logo {
-                max-width: 110px;
-            }
-            .gracias-social .icon {
-                width: 38px;
-                height: 38px;
-                font-size: 1.2rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="gracias-container">
-        <div class="gracias-card">
-            <img src="img/LogoGrandeSinFondo.svg" alt="Logo Dyf" class="logo">
-            <h1>¡Gracias por tu mensaje!</h1>
-            <p>
-                Hemos recibido tu consulta y te responderemos lo antes posible.<br>
-                Serás redirigido al inicio en unos segundos.
-            </p>
-            <a href="index.html" class="volver">Volver al inicio</a>
-            <div class="gracias-social">
-                <a class="icon" href="https://www.facebook.com/dyftelecomunicaciones" target="_blank" title="Facebook" aria-label="Facebook" rel="noopener noreferrer">
-                    <svg viewBox="0 0 320 512" fill="currentColor" width="24" height="24"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
-                </a>
-                <a class="icon" href="https://www.instagram.com/dyftelecomunicaciones/?utm_source=ig_web_button_share_sheet" target="_blank" title="Instagram" aria-label="Instagram" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
-                </a>
-            </div>
+      <div class="gracias-card">
+        <img src="img/LogoGrandeSinFondo.svg" alt="Logo Dyf" class="logo" />
+        <h1>¡Gracias por tu mensaje!</h1>
+        <p>
+          Hemos recibido tu consulta y te responderemos lo antes posible.<br />
+          Serás redirigido al inicio en unos segundos.
+        </p>
+        <a href="index.html" class="volver">Volver al inicio</a>
+        <div class="gracias-social">
+          <a
+            class="icon"
+            href="https://www.facebook.com/dyftelecomunicaciones"
+            target="_blank"
+            title="Facebook"
+            aria-label="Facebook"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 320 512"
+              fill="currentColor"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+              />
+            </svg>
+          </a>
+          <a
+            class="icon"
+            href="https://www.instagram.com/dyftelecomunicaciones/?utm_source=ig_web_button_share_sheet"
+            target="_blank"
+            title="Instagram"
+            aria-label="Instagram"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              width="24"
+              height="24"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+              />
+            </svg>
+          </a>
         </div>
+      </div>
     </div>
-</body>
-    <script>
-        // Redirige a la página principal después de 6 segundos
-        setTimeout(function() {
-            window.location.href = "index.html";
-        }, 6000);
-    </script>
+  </body>
+  <script>
+    // Redirige a la página principal después de 6 segundos
+    setTimeout(function () {
+      window.location.href = 'index.html';
+    }, 6000);
+  </script>
 </html>

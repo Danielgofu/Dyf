@@ -1,417 +1,691 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <!-- Google Fonts: Rubik, Open Sans, Oswald -->
-        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet"/>
-        <title>Dyf Telecomunicaciones</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Dyf Telecomunicaciones ofrece soluciones de telecomunicaciones de alta calidad.">
-        <meta name="keywords" content="telecomunicaciones, Dyf, servicios, mantenimiento">
-        <meta name="author" content="Dyf Telecomunicaciones">
-        <!-- Favicon -->
-        <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon">
-        <!-- Bootstrap CSS -->
-        <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
+  <head>
+    <!-- Google Fonts: Rubik, Open Sans, Oswald -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dyf Telecomunicaciones</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Dyf Telecomunicaciones ofrece soluciones de telecomunicaciones de alta calidad."
+    />
+    <meta
+      name="keywords"
+      content="telecomunicaciones, Dyf, servicios, mantenimiento"
+    />
+    <meta name="author" content="Dyf Telecomunicaciones" />
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Favicon estándar -->
+    <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon" />
+
+    <!-- Apple Touch Icon (iOS/iPadOS) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+
+    <!-- Iconos Android (opcional, para compatibilidad PWA) -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/faviconDYF.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="img/faviconDYF.ico"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000" />
+    <link
+      rel="preload"
+      as="image"
+      href="img/1-xl.webp"
+      imagesrcset="img/1-xl.webp 1280w, img/1-large.webp 1280w"
+      imagesizes="100vw"
+    />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader-bg" aria-live="polite" aria-busy="true">
+      <div id="loader-content">
+        <img
+          data-src="img/LogoGrandeSinFondo.svg"
+          alt="Logo Dyf"
+          class="loader-logo lazy"
         />
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/index.css">
-        <!-- GSAP -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-        <!-- Cache Control -->
-        <meta http-equiv="Cache-Control" content="max-age=31536000">
-        <link rel="preload" as="image" href="img/1-xl.webp" imagesrcset="img/1-xl.webp 1280w, img/1-large.webp 1280w" imagesizes="100vw">
-    </head>
-    <body>
-        <!-- Loader -->
-        <div id="loader-bg" aria-live="polite" aria-busy="true">
-            <div id="loader-content">
-                <img src="img/LogoGrandeSinFondo.svg" alt="Logo Dyf" class="loader-logo" />
-                <div id="loader" role="status" aria-label="Cargando"></div>
-            </div>
+        <div id="loader" role="status" aria-label="Cargando"></div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header class="fixed-top">
+      <!-- Barra superior -->
+      <div class="barraSuperior">
+        <div class="CorreoYTelefono">
+          <a href="mailto:info@dyfservicios.com" class="correo">
+            <svg
+              width="20"
+              height="20"
+              fill="#000000"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            info@dyfservicios.com
+          </a>
+          <a href="tel:916018494" class="telefono">
+            <svg
+              width="20"
+              height="20"
+              fill="#000000"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"
+              />
+            </svg>
+            916 01 84 94
+          </a>
         </div>
-        <!-- Header -->
-        <header class="fixed-top">
-            <!-- Barra superior -->
-            <div class="barraSuperior">
-                <div class="CorreoYTelefono">
-                    <a href="mailto:info@dyfservicios.com" class="correo">
-                        <svg width="20" height="20" fill="#000000" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        info@dyfservicios.com
-                    </a>
-                    <a href="tel:916018494" class="telefono">
-                        <svg width="20" height="20" fill="#000000" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/>
-                        </svg>
-                        916 01 84 94
-                    </a>
-                </div>
-                <div class="redes">
-                    <a href="https://www.facebook.com/dyftelecomunicaciones" target="_blank" rel="noopener noreferrer" title="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30">
-                            <path d="M 15 2 C 7.832 2 2 7.832 2 15 C 2 22.168 7.832 28 15 28 C 22.168 28 28 22.168 28 15 C 28 7.832 22.168 2 15 2 z M 11.666016 6 L 18.332031 6 C 21.457031 6 24 8.5420156 24 11.666016 L 24 18.332031 C 24 21.457031 21.457984 24 18.333984 24 L 11.667969 24 C 8.5429688 24 6 21.457984 6 18.333984 L 6 11.667969 C 6 8.5429688 8.5420156 6 11.666016 6 z M 11.666016 8 C 9.6450156 8 8 9.6459688 8 11.667969 L 8 18.333984 C 8 20.354984 9.6459688 22 11.667969 22 L 18.333984 22 C 20.354984 22 22 20.354031 22 18.332031 L 22 11.666016 C 22 9.6450156 20.354031 8 18.332031 8 L 11.666016 8 z M 19.667969 9.6660156 C 20.035969 9.6660156 20.333984 9.9640312 20.333984 10.332031 C 20.333984 10.700031 20.035969 11 19.667969 11 C 19.299969 11 19 10.700031 19 10.332031 C 19 9.9640312 19.299969 9.6660156 19.667969 9.6660156 z M 15 10 C 17.757 10 20 12.243 20 15 C 20 17.757 17.757 20 15 20 C 12.243 20 10 17.757 10 15 C 10 12.243 12.243 10 15 10 z M 15 12 A 3 3 0 0 0 15 18 A 3 3 0 0 0 15 12 z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/dyftelecomunicaciones" target="_blank" rel="noopener noreferrer" title="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
-                            <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <!-- Logo y menú -->
-            <div class="barraMenu">
-                <a href="index.html">
-                    <img src="img/LogoGrandeConBordes.webp" class="logoCabezera" alt="Logo Dyf">
-                </a>
-                <img class="iconoMenu" src="img/iconoMenu.svg" alt="Abrir menú" title="Abrir menú">
-            </div>
-        </header>
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <a href="index.html">
-                    <img title="logoDYF" src="img/LogoGrandeSinFondo.svg" alt="Logo Dyf" class="logoSidebar">
-                </a>
-            </div>
-            <div>
-                <img class="close-btn" src="img/iconoSalir.svg" alt="Cerrar menú" title="Cerrar menú">
-            </div>
-            <div class="botonesSidebar">
-                <ul class="sidebar-list">
-                    <li>
-                        <a href="index.html" class="sidebar-item">
-                            <div class="sidebar-content">
-                                <img class="iconoSidebar" src="img/iconoInicio.svg" alt="Inicio">
-                                <span class="sidebar-text">Inicio</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="equipo.html" class="sidebar-item">
-                            <div class="sidebar-content">
-                                <img class="iconoSidebar" src="img/iconoEquipo.svg" alt="Equipo">
-                                <span class="sidebar-text">Equipo</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="servicios.html" class="sidebar-item">
-                            <div class="sidebar-content">
-                                <img class="iconoSidebar" src="img/iconoServicios.svg" alt="Servicios">
-                                <span class="sidebar-text">Servicios</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contacto.html" class="sidebar-item">
-                            <div class="sidebar-content">
-                                <img class="iconoSidebar" src="img/iconoContacto.svg" alt="Contacto">
-                                <span class="sidebar-text">Contacto</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mantenimiento.html" class="sidebar-item">
-                            <div class="sidebar-content">
-                                <img class="iconoSidebar" src="img/iconoMantenimientoMain.svg" alt="Mantenimiento">
-                                <span class="sidebar-text">Mantenimiento</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="redes">
+          <a
+            href="https://www.facebook.com/dyftelecomunicaciones"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Facebook"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 30 30"
+            >
+              <path
+                d="M 15 2 C 7.832 2 2 7.832 2 15 C 2 22.168 7.832 28 15 28 C 22.168 28 28 22.168 28 15 C 28 7.832 22.168 2 15 2 z M 11.666016 6 L 18.332031 6 C 21.457031 6 24 8.5420156 24 11.666016 L 24 18.332031 C 24 21.457031 21.457984 24 18.333984 24 L 11.667969 24 C 8.5429688 24 6 21.457984 6 18.333984 L 6 11.667969 C 6 8.5429688 8.5420156 6 11.666016 6 z M 11.666016 8 C 9.6450156 8 8 9.6459688 8 11.667969 L 8 18.333984 C 8 20.354984 9.6459688 22 11.667969 22 L 18.333984 22 C 20.354984 22 22 20.354031 22 18.332031 L 22 11.666016 C 22 9.6450156 20.354031 8 18.332031 8 L 11.666016 8 z M 19.667969 9.6660156 C 20.035969 9.6660156 20.333984 9.9640312 20.333984 10.332031 C 20.333984 10.700031 20.035969 11 19.667969 11 C 19.299969 11 19 10.700031 19 10.332031 C 19 9.9640312 19.299969 9.6660156 19.667969 9.6660156 z M 15 10 C 17.757 10 20 12.243 20 15 C 20 17.757 17.757 20 15 20 C 12.243 20 10 17.757 10 15 C 10 12.243 12.243 10 15 10 z M 15 12 A 3 3 0 0 0 15 18 A 3 3 0 0 0 15 12 z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/dyftelecomunicaciones"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"
+              ></path>
+            </svg>
+          </a>
         </div>
-        <!-- Main Content -->
-        <main>
-            <!-- Carrusel -->
-            <div class="carousel" aria-live="polite">
-                <div class="carousel-images">
-                    <picture>
-                        <source srcset="img/1-small.webp" media="(max-width: 480px)"><!-- 640 x 360-->
-                        <source srcset="img/1-medium.webp" media="(max-width: 768px)"><!-- 1024 x 576-->
-                        <source srcset="img/1-large.webp" media="(max-width: 1200px)"><!-- 1280 x 720-->
-                        <source srcset="img/1-xl.webp" media="(min-width: 1920px)"><!-- 1920 x 1080-->
-                        <img
-                            src="img/1-xl.webp"
-                            alt="Imagen 1"
-                            fetchpriority="high"
-                        >
-                    </picture>
-                    <picture>
-                        <source srcset="img/2-small.webp" media="(max-width: 480px)"><!-- 640 x 360-->
-                        <source srcset="img/2-medium.webp" media="(max-width: 768px)"><!-- 1024 x 576-->
-                        <source srcset="img/2-large.webp" media="(max-width: 1200px)"><!-- 1280 x 720-->
-                        <source srcset="img/2-xl.webp" media="(min-width: 1920px)"><!-- 1920 x 1080-->
-                        <img src="img/2-xl.webp" alt="Imagen 2" loading="lazy">
-                    </picture>
-                    <picture>
-                        <source srcset="img/3-small.webp" media="(max-width: 480px)"><!-- 640 x 360-->
-                        <source srcset="img/3-medium.webp" media="(max-width: 768px)"><!-- 1024 x 576-->
-                        <source srcset="img/3-large.webp" media="(max-width: 1200px)"><!-- 1280 x 720-->
-                        <source srcset="img/3-xl.webp" media="(min-width: 1920px)"> <!-- 1920 x 1080-->
-                        <img src="img/3-xl.webp" alt="Imagen 3" loading="lazy">
-                    </picture>
-                    <picture>
-                        <source srcset="img/4-small.webp" media="(max-width: 480px)"><!-- 640 x 360-->
-                        <source srcset="img/4-medium.webp" media="(max-width: 768px)"><!-- 1024 x 576-->
-                        <source srcset="img/4-large.webp" media="(max-width: 1200px)"><!-- 1280 x 720-->
-                        <source srcset="img/4-xl.webp" media="(min-width: 1920px)"> <!-- 1920 x 1080-->
-                        <img src="img/4-xl.webp" alt="Imagen 4" loading="lazy">
-                    </picture>
-                </div>
-                <!-- Controles del carrusel -->
-                <button class="carousel-control prev" aria-label="Anterior">❮</button>
-                <button class="carousel-control next" aria-label="Siguiente">❯</button>
+      </div>
+      <!-- Logo y menú -->
+      <div class="barraMenu">
+        <a href="index.html">
+          <img
+            data-src="img/LogoGrandeConBordes.webp"
+            class="logoCabezera lazy"
+            alt="Logo Dyf"
+          />
+        </a>
+        <img
+          class="iconoMenu lazy"
+          data-src="img/iconoMenu.svg"
+          alt="Abrir menú"
+          title="Abrir menú"
+        />
+      </div>
+    </header>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html">
+          <img
+            title="logoDYF"
+            data-src="img/LogoGrandeSinFondo.svg"
+            alt="Logo Dyf"
+            class="logoSidebar lazy"
+          />
+        </a>
+      </div>
+      <div>
+        <img
+          class="close-btn lazy"
+          data-src="img/iconoSalir.svg"
+          alt="Cerrar menú"
+          title="Cerrar menú"
+        />
+      </div>
+      <div class="botonesSidebar">
+        <ul class="sidebar-list">
+          <li>
+            <a href="index.html" class="sidebar-item">
+              <div class="sidebar-content">
+                <img
+                  class="iconoSidebar lazy"
+                  data-src="img/iconoInicio.svg"
+                  alt="Inicio"
+                />
+                <span class="sidebar-text">Inicio</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="equipo.html" class="sidebar-item">
+              <div class="sidebar-content">
+                <img
+                  class="iconoSidebar lazy"
+                  data-src="img/iconoEquipo.svg"
+                  alt="Equipo"
+                />
+                <span class="sidebar-text">Equipo</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="servicios.html" class="sidebar-item">
+              <div class="sidebar-content">
+                <img
+                  class="iconoSidebar lazy"
+                  data-src="img/iconoServicios.svg"
+                  alt="Servicios"
+                />
+                <span class="sidebar-text">Servicios</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="contacto.html" class="sidebar-item">
+              <div class="sidebar-content">
+                <img
+                  class="iconoSidebar lazy"
+                  data-src="img/iconoContacto.svg"
+                  alt="Contacto"
+                />
+                <span class="sidebar-text">Contacto</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="mantenimiento.html" class="sidebar-item">
+              <div class="sidebar-content">
+                <img
+                  class="iconoSidebar lazy"
+                  data-src="img/iconoMantenimientoMain.svg"
+                  alt="Mantenimiento"
+                />
+                <span class="sidebar-text">Mantenimiento</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <main>
+      <!-- Carrusel -->
+      <div class="carousel" aria-live="polite">
+        <div class="carousel-images">
+          <!-- Carrusel imágenes -->
+          <picture>
+            <source srcset="img/1-small.webp" media="(max-width: 480px)" />
+            <source srcset="img/1-medium.webp" media="(max-width: 768px)" />
+            <source srcset="img/1-large.webp" media="(max-width: 1200px)" />
+            <source srcset="img/1-xl.webp" media="(min-width: 1920px)" />
+            <img
+              data-src="img/1-xl.webp"
+              alt="Imagen 1"
+              fetchpriority="high"
+              class="lazy"
+            />
+          </picture>
+          <picture>
+            <source srcset="img/2-small.webp" media="(max-width: 480px)" />
+            <source srcset="img/2-medium.webp" media="(max-width: 768px)" />
+            <source srcset="img/2-large.webp" media="(max-width: 1200px)" />
+            <source srcset="img/2-xl.webp" media="(min-width: 1920px)" />
+            <img
+              data-src="img/2-xl.webp"
+              alt="Imagen 2"
+              loading="lazy"
+              class="lazy"
+            />
+          </picture>
+          <picture>
+            <source srcset="img/3-small.webp" media="(max-width: 480px)" />
+            <source srcset="img/3-medium.webp" media="(max-width: 768px)" />
+            <source srcset="img/3-large.webp" media="(max-width: 1200px)" />
+            <source srcset="img/3-xl.webp" media="(min-width: 1920px)" />
+            <img
+              data-src="img/3-xl.webp"
+              alt="Imagen 3"
+              loading="lazy"
+              class="lazy"
+            />
+          </picture>
+          <picture>
+            <source srcset="img/4-small.webp" media="(max-width: 480px)" />
+            <source srcset="img/4-medium.webp" media="(max-width: 768px)" />
+            <source srcset="img/4-large.webp" media="(max-width: 1200px)" />
+            <source srcset="img/4-xl.webp" media="(min-width: 1920px)" />
+            <img
+              data-src="img/4-xl.webp"
+              alt="Imagen 4"
+              loading="lazy"
+              class="lazy"
+            />
+          </picture>
+        </div>
+        <!-- Controles del carrusel -->
+        <button class="carousel-control prev" aria-label="Anterior">❮</button>
+        <button class="carousel-control next" aria-label="Siguiente">❯</button>
+      </div>
+      <div class="py-4 contenedorServicios">
+        <div class="contenedorElegirnos mb-4">
+          <h1 class="tituloElegirnos">
+            ¿Por qué elegir Dyf Telecomunicaciones?
+          </h1>
+          <div class="decoracionSubrayado"></div>
+        </div>
+        <div class="row">
+          <!-- Sección 1 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="cuadro">
+              <img
+                data-src="img/iconoAntena.svg"
+                alt="Antena"
+                class="ImagenCuadro lazy"
+              />
+              <h2>Antenas</h2>
+              <div class="textoCuadro">
+                <span>
+                  Antenistas en Madrid y alrededores. Realizamos Servicios de
+                  Instalación, mantenimiento y reparación de antenas,
+                  parabólicas, canales TDT...
+                </span>
+              </div>
+              <button class="boton" onclick="location.href='servicios.html'">
+                <img
+                  class="IconoLupaMain lazy"
+                  data-src="img/iconoLupa.svg"
+                  alt="Flecha derecha"
+                />
+                <span class="textoCuadro">Leer más</span>
+              </button>
             </div>
-            <div class="py-4 contenedorServicios">
-                <div class="contenedorElegirnos mb-4">
-                    <h1 class="tituloElegirnos">¿Por qué elegir Dyf Telecomunicaciones?</h1>
-                    <div class="decoracionSubrayado"></div>
-                </div>
-                <div class="row">
-                    <!-- Sección 1 -->
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="cuadro">
-                            <img src="img/iconoAntena.svg" alt="Antena" class="ImagenCuadro">
-                            <h2>Antenas</h2>
-                            <div class="textoCuadro">
-                                <span>
-                                    Antenistas en Madrid y alrededores. Realizamos Servicios de Instalación, mantenimiento y reparación de antenas, parabólicas, canales TDT...
-                                </span>
-                            </div>
-                            <button class="boton" onclick="location.href='servicios.html'">
-                                <img class="IconoLupaMain"src="img/iconoLupa.svg" alt="Flecha derecha">
-                                <span class="textoCuadro">Leer más</span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Sección 2 -->
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="cuadro">
-                            <img src="img/iconoPortero.svg" alt="Portero" class="ImagenCuadro">
-                            <h2>Porteros</h2>
-                            <div class="textoCuadro">
-                                <span>
-                                    Porteros automáticos y vídeoporteros. Te enviamos un técnico para solucionar cualquier avería. El telefonillo no...
-                                </span>
-                            </div>
-                            <button class="boton" onclick="location.href='servicios.html'">
-                                <img class="IconoLupaMain"src="img/iconoLupa.svg" alt="Flecha derecha">
-                                <span class="textoCuadro">Leer más</span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Sección 3 -->
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="cuadro">
-                            <img src="img/iconoMantenimientoMain.svg" alt="Mantenimiento" class="ImagenCuadro">
-                            <h2>Mantenimiento</h2>
-                            <div class="textoCuadro">
-                                <span>
-                                    Alarmas y CCTV. Electricidad y Servicios de Mantenimiento. Atendemos averías y urgencias. Te envíamos un técnico profesional...
-                                </span>
-                            </div>
-                            <button class="boton" onclick="location.href='servicios.html'">
-                                <img class="IconoLupaMain"src="img/iconoLupa.svg" alt="Flecha derecha">
-                                <span class="textoCuadro">Leer más</span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Sección 4 -->
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="cuadro">
-                            <img src="img/iconoOtros.svg" alt="Otros" class="ImagenCuadro">
-                            <h2>Otros</h2>
-                            <div class="textoCuadro">
-                                <span>
-                                    Especialistas en contratos de mantenimientos para comunidades. Si te has decidido por el ahorro energético para tu comunidad...
-                                </span>
-                            </div>
-                            <button class="boton" onclick="location.href='servicios.html'">
-                                <img class="IconoLupaMain"src="img/iconoLupa.svg" alt="Flecha derecha">
-                                <span class="textoCuadro">Leer más</span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Sección 5 -->
-                    <div class="col-12 col-md-6 col-lg-6 mb-3">
-                        <div class="cuadro">
-                            <img src="img/iconoWifi.svg" alt="Red y acceso" class="ImagenCuadro">
-                            <h2>Instalaciones de Red</h2>
-                            <div class="textoCuadro">
-                            <span>
-                                Diseñamos e instalamos cableado estructurado, redes Wi-Fi y puntos de acceso
-                                para hogares, oficinas y comunidades. Conectividad estable y de alta velocidad.
-                            </span>
-                        </div>
-                        <button class="boton" onclick="window.location.href='servicios-red.html'">
-                            <img class="IconoLupaMain" src="img/iconoLupa.svg" alt="Leer más">
-                            <span class="textoCuadro">Leer más</span>
-                        </button>
-                        </div>
-                    </div>
-                    <!-- Sección 6 -->
-                    <div class="col-12 col-md-6 col-lg-6 mb-3">
-                        <div class="cuadro">
-                            <img src="img/iconoPresupuesto.svg" alt="Asesoría técnica" class="ImagenCuadro">
-                            <h2>Presupuestos y Asesoría</h2>
-                            <div class="textoCuadro">
-                            <span>
-                                Te asesoramos sin compromiso y preparamos un presupuesto personalizado.
-                                Ahorrarás tiempo y dinero con soluciones adaptadas a tus necesidades.
-                            </span>
-                        </div>
-                        <button class="boton" onclick="window.location.href='contacto.html'">
-                            <img class="IconoLupaMain" src="img/iconoLupa.svg" alt="Leer más">
-                            <span class="textoCuadro">Solicita presupuesto</span>
-                        </button>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <!-- Sección 2 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="cuadro">
+              <img
+                data-src="img/iconoPortero.svg"
+                alt="Portero"
+                class="ImagenCuadro lazy"
+              />
+              <h2>Porteros</h2>
+              <div class="textoCuadro">
+                <span>
+                  Porteros automáticos y vídeoporteros. Te enviamos un técnico
+                  para solucionar cualquier avería. El telefonillo no...
+                </span>
+              </div>
+              <button class="boton" onclick="location.href='servicios.html'">
+                <img
+                  class="IconoLupaMain lazy"
+                  data-src="img/iconoLupa.svg"
+                  alt="Flecha derecha"
+                />
+                <span class="textoCuadro">Leer más</span>
+              </button>
             </div>
-            <div class="colaboradores">
-                <div class="container">
-                    <div class="colunm">
-                        <div class="col-12 col-md-12 col-lg-12 py-4">
-                            <h1 class="tituloPatrocinadores">¿Con qué marcas trabajamos?</h1>
-                            <div class="decoracionSubrayadoPatrocinadores"></div>
-                        </div>
-                        <div class="fotosPatrocinadores">
-                            <div class="col-6 col-md-3 col-lg-3 mb-3 d-flex justify-content-center">
-                                <img src="img/colaborador1.png" alt="Colaborador 1" class="imagenPatrocinador">
-                            </div>
-                            <div class="col-6 col-md-3 col-lg-3 mb-3 d-flex justify-content-center">
-                                <img src="img/colaborador2.svg" alt="Colaborador 2" class="imagenPatrocinador">
-                            </div>
-                            <div class="col-6 col-md-3 col-lg-3 mb-3 d-flex justify-content-center">
-                                <img src="img/colaborador3.jpg" alt="Colaborador 3" class="imagenPatrocinador">
-                            </div>
-                            <div class="col-6 col-md-3 col-lg-3 mb-3 d-flex justify-content-center">
-                                <img src="img/colaborador4.png" alt="Colaborador 4" class="imagenPatrocinador">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <!-- Sección 3 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="cuadro">
+              <img
+                data-src="img/iconoMantenimientoMain.svg"
+                alt="Mantenimiento"
+                class="ImagenCuadro lazy"
+              />
+              <h2>Mantenimiento</h2>
+              <div class="textoCuadro">
+                <span>
+                  Alarmas y CCTV. Electricidad y Servicios de Mantenimiento.
+                  Atendemos averías y urgencias. Te envíamos un técnico
+                  profesional...
+                </span>
+              </div>
+              <button class="boton" onclick="location.href='servicios.html'">
+                <img
+                  class="IconoLupaMain lazy"
+                  data-src="img/iconoLupa.svg"
+                  alt="Flecha derecha"
+                />
+                <span class="textoCuadro">Leer más</span>
+              </button>
             </div>
-            <div class="contenedorUbicacion">
-                <div class="contenedorTextoUbicacion">
-                    <img src="img/iconoMapa.svg" alt="Mantenimiento" class="imagenUbicacion">
-                    <h2>Encuéntranos</h2>
-                    <div class="textoUbicacion">
-                        <span>
-                            Estamos ubicados en <strong>C. Valdemorillo, 20, 28901 Getafe, Madrid</strong>. 
-                            Visítanos para conocer más sobre nuestros servicios y cómo podemos ayudarte. 
-                            Consulta nuestra ubicación en el mapa para llegar fácilmente. 
-                            Nuestro equipo estará encantado de recibirte y resolver cualquier duda que tengas. 
-                            ¡Te esperamos!
-                        </span>
-                    </div>
-                </div>
-                <iframe 
-                    class="iframe-mapa" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d679.3365255385618!2d-3.734068964508289!3d40.30612732983354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422099e816fe19%3A0x5730c9c93e40f4ff!2sC.%20Valdemorillo%2C%2020%2C%2028901%20Getafe%2C%20Madrid!5e1!3m2!1ses!2ses!4v1748292500891!5m2!1ses!2ses" 
-                    allowfullscreen="" 
-                    title="Mapa de ubicación de Dyf Telecomunicaciones"
-                ></iframe>
+          </div>
+          <!-- Sección 4 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="cuadro">
+              <img
+                data-src="img/iconoOtros.svg"
+                alt="Otros"
+                class="ImagenCuadro lazy"
+              />
+              <h2>Otros</h2>
+              <div class="textoCuadro">
+                <span>
+                  Especialistas en contratos de mantenimientos para comunidades.
+                  Si te has decidido por el ahorro energético para tu
+                  comunidad...
+                </span>
+              </div>
+              <button class="boton" onclick="location.href='servicios.html'">
+                <img
+                  class="IconoLupaMain lazy"
+                  data-src="img/iconoLupa.svg"
+                  alt="Flecha derecha"
+                />
+                <span class="textoCuadro">Leer más</span>
+              </button>
             </div>
-        </main>
+          </div>
+          <!-- Sección 5 -->
+          <div class="col-12 col-md-6 col-lg-6 mb-3">
+            <div class="cuadro">
+              <img
+                data-src="img/iconoWifi.svg"
+                alt="Red y acceso"
+                class="ImagenCuadro lazy"
+              />
+              <h2>Instalaciones de Red</h2>
+              <div class="textoCuadro">
+                <span>
+                  Diseñamos e instalamos cableado estructurado, redes Wi-Fi y
+                  puntos de acceso para hogares, oficinas y comunidades.
+                  Conectividad estable y de alta velocidad.
+                </span>
+              </div>
+              <button
+                class="boton"
+                onclick="window.location.href='servicios-red.html'"
+              >
+                <img
+                  class="IconoLupaMain lazy"
+                  data-src="img/iconoLupa.svg"
+                  alt="Leer más"
+                />
+                <span class="textoCuadro">Leer más</span>
+              </button>
+            </div>
+          </div>
+          <!-- Sección 6 -->
+          <div class="col-12 col-md-6 col-lg-6 mb-3">
+            <div class="cuadro">
+              <img
+                data-src="img/iconoPresupuesto.svg"
+                alt="Asesoría técnica"
+                class="ImagenCuadro lazy"
+              />
+              <h2>Presupuestos y Asesoría</h2>
+              <div class="textoCuadro">
+                <span>
+                  Te asesoramos sin compromiso y preparamos un presupuesto
+                  personalizado. Ahorrarás tiempo y dinero con soluciones
+                  adaptadas a tus necesidades.
+                </span>
+              </div>
+              <button
+                class="boton"
+                onclick="window.location.href='contacto.html'"
+              >
+                <img
+                  class="IconoLupaMain lazy"
+                  data-src="img/iconoLupa.svg"
+                  alt="Leer más"
+                />
+                <span class="textoCuadro">Solicita presupuesto</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="colaboradores">
+        <div class="container">
+          <div class="colunm">
+            <div class="col-12 col-md-12 col-lg-12 py-4">
+              <h1 class="tituloPatrocinadores">¿Con qué marcas trabajamos?</h1>
+              <div class="decoracionSubrayadoPatrocinadores"></div>
+            </div>
+            <div class="fotosPatrocinadores">
+              <div
+                class="col-6 col-md-3 col-lg-3 mb-3 d-flex justify-content-center"
+              >
+                <img
+                  data-src="img/colaborador1.png"
+                  alt="Colaborador 1"
+                  class="imagenPatrocinador lazy"
+                />
+              </div>
+              <div
+                class="col-6 col-md-3 col-lg-3 mb-3 d-flex justify-content-center"
+              >
+                <img
+                  data-src="img/colaborador2.svg"
+                  alt="Colaborador 2"
+                  class="imagenPatrocinador lazy"
+                />
+              </div>
+              <div
+                class="col-6 col-md-3 col-lg-3 mb-3 d-flex justify-content-center"
+              >
+                <img
+                  data-src="img/colaborador3.jpg"
+                  alt="Colaborador 3"
+                  class="imagenPatrocinador lazy"
+                />
+              </div>
+              <div
+                class="col-6 col-md-3 col-lg-3 mb-3 d-flex justify-content-center"
+              >
+                <img
+                  data-src="img/colaborador4.png"
+                  alt="Colaborador 4"
+                  class="imagenPatrocinador lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contenedorUbicacion">
+        <div class="contenedorTextoUbicacion">
+          <img
+            data-src="img/iconoMapa.svg"
+            alt="Mantenimiento"
+            class="imagenUbicacion lazy"
+          />
+          <h2>Encuéntranos</h2>
+          <div class="textoUbicacion">
+            <span>
+              Estamos ubicados en
+              <strong>C. Valdemorillo, 20, 28901 Getafe, Madrid</strong>.
+              Visítanos para conocer más sobre nuestros servicios y cómo podemos
+              ayudarte. Consulta nuestra ubicación en el mapa para llegar
+              fácilmente. Nuestro equipo estará encantado de recibirte y
+              resolver cualquier duda que tengas. ¡Te esperamos!
+            </span>
+          </div>
+        </div>
+        <iframe
+          class="iframe-mapa"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d679.3365255385618!2d-3.734068964508289!3d40.30612732983354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422099e816fe19%3A0x5730c9c93e40f4ff!2sC.%20Valdemorillo%2C%2020%2C%2028901%20Getafe%2C%20Madrid!5e1!3m2!1ses!2ses!4v1748292500891!5m2!1ses!2ses"
+          allowfullscreen=""
+          title="Mapa de ubicación de Dyf Telecomunicaciones"
+        ></iframe>
+      </div>
+    </main>
     <!-- Footer -->
-        <footer class="bg-header text-dark py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- Información de contacto -->
-                    <div class="col-12 col-md-6 col-lg-4 text-center text-md-start mb-4 mb-lg-0">
-                        <a href="index.html">
-                            <img src="img/LogoGrandeConBordes.webp" alt="Logo" class="mb-3 logoCabezera">
-                        </a>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="tel:916018494">
-                                    <i class="fas fa-phone-alt me-2"></i>Tfno1: 916 01 84 94
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:916018494">
-                                    <i class="fas fa-phone-alt me-2"></i>Tfno2: 918 31 20 61
-                                </a>
-                            </li>
-                            <li><i class="fas fa-envelope me-2"></i><a href="mailto:info@dyfservicios.com">Em@il: info@dyfservicios.com</a></li>
-                            <li>
-                                <a href="https://maps.app.goo.gl/AehR6pEoBAtXiJgX6" target="_blank" rel="noopener noreferrer">
-                                    <i class="fas fa-map-marker-alt me-2"></i> C. Valdemorillo, 20, 28901 Getafe
-                                </a> 
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Enlaces -->
-                    <div class="col-12 col-md-6 col-lg-4 text-center mb-4 mb-lg-0">
-                        <h5>Enlaces</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="equipo.html">Equipo</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="servicios.html">Servicios</a></li>
-                            <li><a href="mantenimiento.html">Mantenimiento</a></li>
-                        </ul>
-                    </div>
-                    <!-- Horarios y redes -->
-                    <div class="col-12 col-lg-4 text-center">
-                        <ul class="wrapper">
-                            <li class="icon facebook">
-                                <span class="tooltip">Facebook</span>
-                                <svg
-                                    viewBox="0 0 320 512"
-                                    height="1.2em"
-                                    fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    onclick="window.open('https://www.facebook.com/dyftelecomunicaciones', '_blank')"
-                                >
-                                    <path
-                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                                    ></path>
-                                </svg>
-                            </li>
-                            <li class="icon instagram">
-                                <span class="tooltip">Instagram</span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="1.2em"
-                                    fill="currentColor"
-                                    class="bi bi-instagram"
-                                    viewBox="0 0 16 16"
-                                    onclick="window.open('https://www.instagram.com/dyftelecomunicaciones/?utm_source=ig_web_button_share_sheet', '_blank')"
-                                >
-                                    <path
-                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-                                    ></path>
-                                </svg>
-                            </li>
-                        </ul>
-                        <h5>Horario oficina</h5>
-                        <ul class="list-unstyled">
-                            <li>Lunes a Viernes: 9:00 AM - 14:00 PM</li>
-                        </ul>
-                        <ul>
-                            <li><a href="privacidad.html" target="_blank">Política de Privacidad</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- JS -->
-        <script src="js/global.js" defer></script>
-        <script src="js/index.js" defer></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <footer class="bg-header text-dark py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Información de contacto -->
+          <div
+            class="col-12 col-md-6 col-lg-4 text-center text-md-start mb-4 mb-lg-0"
+          >
+            <a href="index.html">
+              <img
+                data-src="img/LogoGrandeConBordes.webp"
+                alt="Logo"
+                class="mb-3 logoCabezera lazy"
+              />
+            </a>
+            <ul class="list-unstyled">
+              <li>
+                <a href="tel:916018494">
+                  <i class="fas fa-phone-alt me-2"></i>Tfno1: 916 01 84 94
+                </a>
+              </li>
+              <li>
+                <a href="tel:916018494">
+                  <i class="fas fa-phone-alt me-2"></i>Tfno2: 918 31 20 61
+                </a>
+              </li>
+              <li>
+                <i class="fas fa-envelope me-2"></i
+                ><a href="mailto:info@dyfservicios.com"
+                  >Em@il: info@dyfservicios.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/AehR6pEoBAtXiJgX6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fas fa-map-marker-alt me-2"></i> C. Valdemorillo,
+                  20, 28901 Getafe
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Enlaces -->
+          <div class="col-12 col-md-6 col-lg-4 text-center mb-4 mb-lg-0">
+            <h5>Enlaces</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="equipo.html">Equipo</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="servicios.html">Servicios</a></li>
+              <li><a href="mantenimiento.html">Mantenimiento</a></li>
+            </ul>
+          </div>
+          <!-- Horarios y redes -->
+          <div class="col-12 col-lg-4 text-center">
+            <ul class="wrapper">
+              <li class="icon facebook">
+                <span class="tooltip">Facebook</span>
+                <svg
+                  viewBox="0 0 320 512"
+                  height="1.2em"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  onclick="window.open('https://www.facebook.com/dyftelecomunicaciones', '_blank')"
+                >
+                  <path
+                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                  ></path>
+                </svg>
+              </li>
+              <li class="icon instagram">
+                <span class="tooltip">Instagram</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1.2em"
+                  fill="currentColor"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                  onclick="window.open('https://www.instagram.com/dyftelecomunicaciones/?utm_source=ig_web_button_share_sheet', '_blank')"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                  ></path>
+                </svg>
+              </li>
+            </ul>
+            <h5>Horario oficina</h5>
+            <ul class="list-unstyled">
+              <li>Lunes a Viernes: 9:00 AM - 14:00 PM</li>
+            </ul>
+            <ul>
+              <li>
+                <a href="privacidad.html" target="_blank"
+                  >Política de Privacidad</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JS -->
+    <script src="js/global.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Instant.page: precarga enlaces para navegación más rápida -->
+    <script
+      src="https://unpkg.com/instant.page@5.2.0/instantpage.min.js"
+      type="module"
+    ></script>
+    <!-- Vanilla LazyLoad: carga imágenes solo cuando se ven -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad();
+    </script>
+  </body>
 </html>
