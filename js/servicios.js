@@ -1,11 +1,7 @@
 // Animaciones GSAP para servicios
-
-
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-
     gsap.registerPlugin(ScrollTrigger);
-
     // Animación para cada cuadro de servicio
     gsap.utils.toArray('.cuadro-servicio').forEach((el, i) => {
         gsap.from(el, {
@@ -21,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
     // Animación para el header de servicios
     gsap.from('.servicios-header', {
         opacity: 0,
@@ -29,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1,
         ease: "power2.out"
     });
-
     // Animación para el bloque de contacto
     gsap.from('.servicios-contacto', {
         opacity: 0,
@@ -39,30 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: '.servicios-contacto',
             start: "top 90%",
-            end: "bottom 10%", // Añadido para animar al salir
-            toggleActions: "play none none reverse", // Reproduce y revierte al salir
+            end: "bottom 10%",
+            toggleActions: "play none none reverse",
         }
     });
-
     // Animación para el botón del Hero
     gsap.from('.btn-hero', {
         opacity: 0,
-        y: 20, // El botón aparece desde abajo
-        duration: 1, // Duración de la animación
-        ease: "power2.out", // Suavidad de la animación
-        delay: 0.5 // Retraso para que aparezca después del texto
+        y: 20,
+        duration: 1,
+        ease: "power2.out",
+        delay: 0.5
     });
-
     // Animación para el texto del Hero
     gsap.from('.hero-title, .hero-subtitle', {
         opacity: 0,
-        y: -20, // El texto aparece desde arriba
+        y: -20,
         duration: 1,
         ease: "power2.out",
-        stagger: 0.2 // Aparece con un pequeño retraso entre el título y el subtítulo
+        stagger: 0.2
     });
-
-    // Animación para el botón de contacto
+     // Animación para el botón de contacto
     gsap.from('.btn-solicitar', {
         opacity: 0,
         scale: 0.9,
@@ -75,20 +66,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
 // Desplazamiento suave al hacer clic en el botón "Ver Servicios"
 document.querySelector('.btn-hero').addEventListener('click', (e) => {
     e.preventDefault();
     const target = document.querySelector('#servicios-lista');
-
     // Ajustar el offset dinámicamente según el tamaño de la pantalla
-    const offset = window.innerWidth <= 768 ? -50 : -100; // Menor offset en pantallas pequeñas
+    const offset = window.innerWidth <= 768 ? -50 : -100;
     const targetPosition = target.getBoundingClientRect().top + window.scrollY + offset;
-
     // Usar GSAP para animar el desplazamiento
     gsap.to(window, {
-        scrollTo: { y: targetPosition, autoKill: true }, // Desplazamiento suave
-        duration: 1, // Duración de la animación
-        ease: "power2.out" // Suavidad de la animación
+        scrollTo: { y: targetPosition, autoKill: true },
+        duration: 1,
+        ease: "power2.out"
     });
 });

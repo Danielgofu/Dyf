@@ -1,6 +1,5 @@
 // Inicializar GSAP y ScrollTrigger
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
 document.addEventListener('DOMContentLoaded', () => {
     // Animación para el texto del Hero
     gsap.from('.hero-title, .hero-subtitle', {
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power2.out",
         stagger: 0.2
     });
-
     // Animación para el botón del Hero
     gsap.from('.btn-hero', {
         opacity: 0,
@@ -19,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power2.out",
         delay: 0.5
     });
-
     // Desplazamiento suave al hacer clic en el botón "Conócenos mejor"
     const btnHero = document.querySelector('.btn-hero');
     if (btnHero) {
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
 // Animación para el contenedor de contacto
 gsap.from(".equipo-contacto", {
     scrollTrigger: {
@@ -53,7 +49,6 @@ gsap.from(".equipo-contacto", {
     duration: 0.8,
     ease: "power2.out",
 });
-
 // Animación para el cuadro de testimonios
 gsap.from(".testimonios-equipo", {
     scrollTrigger: {
@@ -66,23 +61,6 @@ gsap.from(".testimonios-equipo", {
     duration: 0.8,
     ease: "power2.out",
 });
-
-// Animación para cada testimonio individual
-gsap.utils.toArray('.testimonio').forEach((testimonio, i) => {
-    gsap.from(testimonio, {
-        scrollTrigger: {
-            trigger: testimonio,
-            start: "top 100%",
-            toggleActions: "play none none reverse", // Reproduce y revierte al salir
-        },
-        opacity: 0,
-        y: 30, // Aparece desde abajo
-        duration: 0.6,
-        delay: i * 0.2, // Retraso entre testimonios
-        ease: "power2.out",
-    });
-});
-
 // Carrusel de valores tipo scroll horizontal
 document.addEventListener('DOMContentLoaded', function () {
   const carousel = document.getElementById('valores-carousel');
@@ -90,12 +68,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const rightBtn = document.getElementById('valores-right');
   const cards = carousel.querySelectorAll('.card');
   const card = cards[0];
-  let cardWidth = card.offsetWidth + 32; // 32px gap
-
+  let cardWidth = card.offsetWidth + 32;
   function updateCardWidth() {
     cardWidth = card.offsetWidth + 32;
   }
-
   // Animación de rebote y desplazamiento lateral al hacer click en flechas
   function bounce(btn, direction = 'left') {
     const xMove = direction === 'left' ? -12 : 12;
@@ -114,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     );
   }
-
   leftBtn.addEventListener('click', () => {
     updateCardWidth();
     carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
@@ -125,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
     carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
     bounce(rightBtn, 'right');
   });
-
   // Deshabilita flechas si no hay más para mostrar (con animación de opacidad)
   function updateArrows() {
     leftBtn.disabled = carousel.scrollLeft < 10;
@@ -137,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateArrows();
   });
   updateArrows();
-
   // Animación de entrada de las tarjetas SOLO con opacidad y escala (no y)
   gsap.from(cards, {
     opacity: 0,
@@ -152,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-
 // Carrusel tipo slider para testimonios (uno a la vez, ancho, con dots)
 document.addEventListener('DOMContentLoaded', function () {
     const slides = Array.from(document.querySelectorAll('.testimonio-slide'));
@@ -160,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const rightBtn = document.getElementById('testimonios-right');
     const dotsContainer = document.getElementById('testimonios-dots');
     let current = 0;
-
     // Crear dots
     slides.forEach((_, i) => {
         const dot = document.createElement('button');
@@ -170,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function () {
         dotsContainer.appendChild(dot);
     });
     const dots = Array.from(dotsContainer.children);
-
     function update() {
         slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === current);
@@ -181,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
         leftBtn.disabled = current === 0;
         rightBtn.disabled = current === slides.length - 1;
     }
-
     function goTo(idx) {
         if (idx === current) return;
         gsap.to(slides[current], { opacity: 0, duration: 0.3, onComplete: () => {
@@ -192,14 +161,12 @@ document.addEventListener('DOMContentLoaded', function () {
             update();
         }});
     }
-
     leftBtn.addEventListener('click', () => {
         if (current > 0) goTo(current - 1);
     });
     rightBtn.addEventListener('click', () => {
         if (current < slides.length - 1) goTo(current + 1);
     });
-
     // Swipe en móvil
     let startX = 0;
     const slider = document.getElementById('testimonios-slider');
@@ -214,10 +181,8 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (diff < 0 && current < slides.length - 1) goTo(current + 1);
         }
     });
-
     update();
 });
-
 // Animación para la nueva sección de contacto (equipo-contacto-nueva)
 gsap.from(".equipo-contacto-nueva", {
     scrollTrigger: {
@@ -230,7 +195,6 @@ gsap.from(".equipo-contacto-nueva", {
     duration: 0.9,
     ease: "power2.out"
 });
-
 // Animación para chips y botón dentro de la sección de contacto
 gsap.from(".equipo-contacto-nueva .btn-contacto-nueva", {
     scrollTrigger: {

@@ -1,8 +1,6 @@
-// Animación de entrada para las tarjetas de servicios
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
         gsap.registerPlugin(ScrollTrigger);
-
         // Hero section: fade in con escala y desenfoque
         gsap.from('.hero-section .container', {
             opacity: 0,
@@ -11,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 1.2,
             ease: "expo.out"
         });
-
         // About section: fade in desde la derecha con rebote
         gsap.from('.about-section .container', {
             scrollTrigger: {
@@ -37,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 1,
             ease: "expo.out"
         });
-
         // FAQ items: fade in con giro X y stagger
         gsap.from('.accordion-item', {
             scrollTrigger: {
@@ -52,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             stagger: 0.12,
             ease: "power3.out"
         });
-
         // Cuadro "¿Tienes otra duda?": entrada elástica desde la izquierda
         gsap.from('.faq-extra-box', {
             scrollTrigger: {
@@ -66,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 0.9,
             ease: "elastic.out(1, 0.7)"
         });
-
         // Icono dentro del cuadro: fade y giro Z
         gsap.from('.faq-extra-icon img', {
             scrollTrigger: {
@@ -80,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
             delay: 0.2,
             ease: "power2.out"
         });
-
         // Botón dentro del cuadro: fade y salto
         gsap.from('.faq-extra-btn', {
             scrollTrigger: {
@@ -94,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             delay: 0.35,
             ease: "back.out(2)"
         });
-        // Animación para columnas de servicios (col-md-3) en vez de service-card
+        // Animación para columnas de servicios (col-md-3)
         gsap.utils.toArray('.services-section .col-lg-3 .col-md-12').forEach((col, i) => {
             gsap.fromTo(
                 col,
@@ -119,8 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
             );
         });
     }
-
-    // Interactividad para la sección FAQ
     const faqButtons = document.querySelectorAll('.accordion-button');
     faqButtons.forEach(button => {
         button.addEventListener('click', () => {

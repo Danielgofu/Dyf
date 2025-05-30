@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 1,
             scale: 0.9,
             opacity: 0,
-            stagger: 0.3, // Retraso progresivo entre imágenes
+            stagger: 0.3,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ".carousel",
@@ -77,27 +77,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         // Animar el contenedor de servicios (.contenedorServicios)
         gsap.from(".contenedorServicios", {
-            duration: 1, // Duración de la animación
-            y: 50, // Desplazamiento inicial hacia abajo
-            opacity: 0, // Comienza invisible
-            ease: "power2.out", // Suavizado
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: "power2.out",
             scrollTrigger: {
-                trigger: ".contenedorServicios", // Activa la animación cuando el contenedor es visible
-                start: "top 95%", // Inicia la animación cuando el contenedor está al 80% de la pantalla
-                toggleActions: "play none none reset", // Configuración de las acciones
+                trigger: ".contenedorServicios",
+                start: "top 95%",
+                toggleActions: "play none none reset",
             },
         });
         // Animar cada columna (.col-12) dentro del contenedor de servicios
         document.querySelectorAll(".contenedorServicios .col-12").forEach((col) => {
             gsap.from(col, {
-                duration: 1, // Duración de la animación
-                y: 50, // Desplazamiento inicial hacia abajo
-                opacity: 0, // Comienza invisible
-                ease: "power2.out", // Suavizado
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power2.out",
                 scrollTrigger: {
-                    trigger: col, // Cada columna tiene su propio activador
-                    start: "top 95%", // Inicia la animación cuando la columna está al 80% de la pantalla
-                    toggleActions: "play none none reset", // Configuración de las acciones
+                    trigger: col,
+                    start: "top 95%",
+                    toggleActions: "play none none reset",
                 },
             });
         });
@@ -107,66 +107,66 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollTrigger: {
                     trigger: cuadro,
                     start: "top 85%",
-                    end: "bottom 15%", // Añadido para animar al salir
-                    toggleActions: "play none none reverse", // Reproduce y revierte al salir
+                    end: "bottom 15%",
+                    toggleActions: "play none none reverse",
                 },
                 opacity: 0,
-                y: 50, // Aparece desde abajo
+                y: 50,
                 duration: 0.6,
-                delay: i * 0.1, // Retraso entre cuadros
+                delay: i * 0.1,
                 ease: "power2.out",
             });
         });
         // Animar el contenedor de patrocinadores
         gsap.from(".fotosPatrocinadores", {
-            duration: 1, // Duración de la animación
-            y: 50, // Desplazamiento inicial hacia abajo
-            opacity: 0, // Comienza invisible
-            ease: "power2.out", // Suavizado
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: "power2.out",
             scrollTrigger: {
-                trigger: ".fotosPatrocinadores", // Activa la animación cuando el contenedor es visible
-                start: "top 85%", // Inicia la animación cuando el contenedor está al 85% de la pantalla
-                toggleActions: "play none none reset", // Configuración de las acciones
+                trigger: ".fotosPatrocinadores",
+                start: "top 85%",
+                toggleActions: "play none none reset",
             },
         });
         // Animar cada imagen dentro del contenedor de patrocinadores
         gsap.utils.toArray('.fotosPatrocinadores .imagenPatrocinador').forEach((imagen, i) => {
             gsap.from(imagen, {
                 scrollTrigger: {
-                    trigger: ".fotosPatrocinadores", // Activa la animación cuando el contenedor es visible
-                    start: "top 85%", // Inicia la animación cuando el contenedor está al 85% de la pantalla
-                    toggleActions: "play none none reset", // Configuración de las acciones
+                    trigger: ".fotosPatrocinadores",
+                    start: "top 85%",
+                    toggleActions: "play none none reset",
                 },
-                opacity: 0, // Comienza invisible
-                y: 30, // Aparece desde abajo
-                duration: 0.6, // Duración de la animación
-                delay: i * 0.2, // Retraso progresivo entre imágenes
-                ease: "power2.out", // Suavizado
+                opacity: 0,
+                y: 30,
+                duration: 0.6,
+                delay: i * 0.2,
+                ease: "power2.out",
             });
         });
         // Animar el contenido de contenedorTextoUbicacion
         gsap.from(".contenedorTextoUbicacion", {
             scrollTrigger: {
                 trigger: ".contenedorTextoUbicacion",
-                start: "top 85%", // Inicia la animación cuando el contenedor está al 85% de la pantalla
-                toggleActions: "play none none reset", // Configuración de las acciones
+                start: "top 85%",
+                toggleActions: "play none none reset",
             },
-            opacity: 0, // Comienza invisible
-            y: 50, // Aparece desde abajo
-            duration: 1, // Duración de la animación
-            ease: "power2.out", // Suavizado
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power2.out",
         });
         // Animar el iframe del mapa
         gsap.from(".iframe-mapa", {
             scrollTrigger: {
                 trigger: ".iframe-mapa",
-                start: "top 85%", // Inicia la animación cuando el iframe está al 85% de la pantalla
-                toggleActions: "play none none reset", // Configuración de las acciones
+                start: "top 85%",
+                toggleActions: "play none none reset",
             },
-            opacity: 0, // Comienza invisible
-            scale: 0.9, // Aparece con un tamaño reducido
-            duration: 1, // Duración de la animación
-            ease: "power2.out", // Suavizado
+            opacity: 0,
+            scale: 0.9,
+            duration: 1,
+            ease: "power2.out",
         });
     }
 });

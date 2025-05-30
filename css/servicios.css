@@ -26,7 +26,6 @@ main{
     letter-spacing: 0.045em;
     text-shadow: 0 2px 8px #fdb00a22;
 }
-
 .intro-servicios {
     color: #74420f;
     font-size: clamp(1.05rem, 2.5vw, 1.22rem);
@@ -37,7 +36,6 @@ main{
     margin: 0 auto;
     text-align: center;
 }
-
 .cuadro-servicio {
     width: 100%;
     height: 100%;
@@ -52,13 +50,12 @@ main{
     align-items: center;
     box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
     min-height: 275px;
-    margin-bottom: 0 !important; /* Elimina el margin-bottom si lo hay */
+    margin-bottom: 0 !important;
 }
 .ImagenCuadro {
     width: 54px;
     margin-bottom: 18px;
 }
-
 .cuadro-servicio h2 {
     color: #000000;
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
@@ -66,7 +63,6 @@ main{
     margin-bottom: 10px;
     letter-spacing: 0.03em;
 }
-
 .textoCuadro {
     width: 100%;
     color: #2d1a00;
@@ -82,25 +78,23 @@ main{
     display: flex;
     flex-direction: column;
     max-width: 90%;
-    margin: 0 auto; /* Centra el contenido */
-    padding: 20px; /* Añade espacio interno */
-    text-align: center; /* Asegura que el texto esté centrado */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 .servicios-contacto h3 {
     color: #000000;
-    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Ajusta el tamaño del texto */
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     font-weight: 700;
     margin-bottom: 10px;
     letter-spacing: 0.03em;
 }
-
 .servicios-contacto p {
     color: #74420f;
-    font-size: clamp(1rem, 3vw, 1.2rem); /* Ajusta el tamaño del texto */
+    font-size: clamp(1rem, 3vw, 1.2rem);
     margin-bottom: 20px;
-    line-height: 1.5; /* Mejora la legibilidad */
+    line-height: 1.5;
 }
-
 .btn-servicios {
     display: inline-flex;
     align-items: center;
@@ -108,17 +102,16 @@ main{
     background: linear-gradient(90deg, #fdb00a, #e86e10);
     color: #ffffff;
     border-radius: 50px;
-    padding: 12px 40px; /* Ajusta el tamaño del botón */
+    padding: 12px 40px;
     text-decoration: none;
     font-weight: 700;
-    font-size: clamp(1rem, 3vw, 1.2rem); /* Ajusta el tamaño del texto */
+    font-size: clamp(1rem, 3vw, 1.2rem);
     letter-spacing: 0.05em;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
 }
-
 .btn-servicios::before {
     content: '';
     position: absolute;
@@ -130,27 +123,22 @@ main{
     transition: all 0.3s ease-in-out;
     z-index: 0;
 }
-
 .btn-servicios:hover {
     background: linear-gradient(90deg, #e86e10, #fdb00a);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
-
 .btn-servicios:hover::before {
     left: 0;
 }
-
 .btn-servicios:active {
     transform: translateY(1px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-
 .iconoContacto{
     max-width: 35px;
     padding-right: 8px;    
 }
-
 @media (max-width: 900px) {
     .row {
         flex-direction: column;
@@ -165,7 +153,6 @@ main{
         column-gap: 0;
     }
 }
-
 /* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {
     main{
@@ -184,7 +171,6 @@ main{
         row-gap: 18px;
     }
 }
-
 @media (max-width: 600px) {
     .servicios-header {
         padding: 22px 6vw 18px 6vw;
@@ -198,7 +184,6 @@ main{
         font-size: clamp(0.98rem, 3vw, 1.08rem);
     }
 }
-
 /* Hero Servicios */
 .hero-servicios {
     position: relative;
@@ -209,53 +194,48 @@ main{
     overflow: hidden;
     padding-bottom: 40px;
 }
-
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-
 .hero-overlay {
     position: absolute;
-    top: 30%; /* Ajustado para que el texto esté más abajo */
+    top: 30%;
     left: 0;
     width: 100%;
-    height: 70%; /* Centrar mejor el contenido */
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fdb00a; /* Texto en naranja */
+    color: #fdb00a;
     padding: 20px;
 }
-
 .hero-title {
     font-family: 'Rubik', sans-serif;
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    margin-bottom: 15px; /* Ajustado para mayor separación */
+    margin-bottom: 15px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    color: #fdb00a; /* Título en naranja */
+    color: #fdb00a;
 }
-
 .hero-subtitle {
     font-family: 'Open Sans', sans-serif;
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: 400;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     max-width: 800px;
-    margin-bottom: 20px; /* Ajustado para mayor separación */
-    color: #fdb00a; /* Subtítulo en naranja */
+    margin-bottom: 20px;
+    color: #fdb00a;
 }
-
 /* Botón para desplazarse */
 .btn-hero {
-    margin-top: 25px; /* Ajustado para mayor separación */
-    background: #fdb00a; /* Fondo naranja */
-    color: #001f3f; /* Texto azul marino */
+    margin-top: 25px;
+    background: #fdb00a;
+    color: #001f3f;
     border-radius: 12px;
     padding: 12px 30px;
     text-decoration: none;
@@ -264,70 +244,62 @@ main{
     letter-spacing: 0.04em;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
-
 /* Sección: Mantenimiento de comunidades */
 .mantenimiento-comunidades {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     border-radius: 12px;
 }
-
 .mantenimiento-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen ocupe todo el contenedor */
+    object-fit: cover;
     object-position: center;
 }
-
 .mantenimiento-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 20px;
-    color: #fdb00a; /* Texto en naranja */
+    color: #fdb00a;
 }
-
 .mantenimiento-title {
     font-family: 'Rubik', sans-serif;
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     margin-bottom: 20px;
-    color: #e86e10; /* Texto en naranja */
+    color: #e86e10;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
-
 .mantenimiento-lista {
     list-style: none;
     padding: 0;
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     line-height: 1.8;
 }
-
 .mantenimiento-lista li {
     margin-bottom: 10px;
-    color: #fdb00a; /* Texto en naranja */
+    color: #fdb00a;
 }
-
 .mantenimiento-frase {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-weight: 500;
     margin-bottom: 20px;
-    color: #fdb00a; /* Color naranja para destacar */
+    color: #fdb00a;
 }
-
 .btn-solicitar {
     display: inline-block;
     background: linear-gradient(90deg, #fdb00a 0%, #e86e10 100%);
@@ -338,53 +310,39 @@ main{
     font-weight: 700;
     font-size: clamp(1rem, 2vw, 1.2rem);
 }
-
 /* Ajustes responsivos */
 @media (max-width: 768px) {
     .hero-overlay {
         height: 50%;
     }
-
     .btn-hero {
-        display: none; /* Oculta el botón en dispositivos pequeños */
+        display: none;
     }
-
     .mantenimiento-overlay {
         padding: 10px;
     }
-
     .mantenimiento-title {
-        font-size: clamp(1.5rem, 4vw, 2rem); /* Reduce el tamaño del título */
+        font-size: clamp(1.5rem, 4vw, 2rem);
     }
-
     .mantenimiento-lista {
-        font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Reduce el tamaño del texto */
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
     }
-
     .btn-solicitar {
-        padding: 10px 20px; /* Botón más compacto */
+        padding: 10px 20px;
         font-size: clamp(0.9rem, 2vw, 1rem);
     }
 }
-
 @media (max-width: 480px) {
     .hero-overlay {
         height: 50%;
     }
-
-    .btn-hero {
-        display: none; /* Oculta el botón en dispositivos muy pequeños */
-    }
-
     .mantenimiento-title {
-        font-size: clamp(1.2rem, 5vw, 1.8rem); /* Reduce aún más el título */
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
     }
-
     .mantenimiento-lista {
-        font-size: clamp(0.8rem, 2vw, 1rem); /* Reduce el texto */
+        font-size: clamp(0.8rem, 2vw, 1rem);
     }
-
     .btn-solicitar {
-        padding: 8px 16px; /* Botón más compacto */
+        padding: 8px 16px;
     }
 }
