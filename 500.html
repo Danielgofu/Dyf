@@ -1,140 +1,165 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <title>Error 500 | DyF Telecomunicaciones</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      background: linear-gradient(135deg, #c75b0b 0%, #f7b500 100%);
-      color: #222;
-      font-family: 'Rubik', Arial, sans-serif;
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .error-container {
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(199, 91, 11, 0.13);
-      padding: 44px 32px 32px 32px;
-      text-align: center;
-      max-width: 580px; /* antes 370px */
-      width: 98vw;
-      animation: fadeIn 0.7s;
-      box-sizing: border-box;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-    .error-icon {
-      display: block;
-      margin: 0 auto 18px auto;
-      width: 70px;
-      height: 70px;
-      max-width: 100%;
-      height: auto;
-    }
-    h1 {
-      color: #d96d1c;
-      font-size: 2.2rem;
-      margin-bottom: 12px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-    }
-    .codigo {
-      font-size: 2.8rem;
-      font-weight: 900;
-      color: #c75b0b;
-      margin-bottom: 8px;
-      letter-spacing: 2px;
-    }
-    p {
-      font-size: 1.13rem;
-      margin-bottom: 18px;
-      color: #333;
-      line-height: 1.7;
-      margin-top: 0;
-    }
-    .detalle-error {
-      color: #be6404;
-      font-size: 1.04rem;
-      margin-bottom: 18px;
-      margin-top: -8px;
-    }
-    .btn-volver {
-      display: inline-block;
-      background: linear-gradient(90deg, #c75b0b 0%, #f7b500 100%);
-      color: #fff;
-      font-weight: 700;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.08rem;
-      box-shadow: 0 2px 12px rgba(199, 91, 11, 0.10);
-      transition: background 0.2s, color 0.2s, transform 0.15s;
-      margin-top: 10px;
-      letter-spacing: 0.5px;
-    }
-    .btn-volver:hover {
-      background: linear-gradient(90deg, #d96d1c 0%, #c75b0b 100%);
-      color: #fff;
-      transform: translateY(-2px) scale(1.04);
-    }
-    .ultima-actualizacion {
-      margin-top: 28px;
-      color: #888;
-      font-size: 0.97rem;
-      text-align: right;
-    }
-    @media (max-width: 600px) {
-      .error-container {
-        padding: 18px 4vw 18px 4vw;
-        border-radius: 20px;
-        max-width: 90vw;
+  <head>
+    <meta charset="utf-8" />
+    <title>Error 500 | DyF Telecomunicaciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #c75b0b 0%, #f7b500 100%);
+        color: #222;
+        font-family: 'Rubik', Arial, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      h1 {
-        font-size: 1.3rem;
+      .error-container {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(199, 91, 11, 0.13);
+        padding: 44px 32px 32px 32px;
+        text-align: center;
+        max-width: 580px; /* antes 370px */
+        width: 98vw;
+        animation: fadeIn 0.7s;
+        box-sizing: border-box;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       .error-icon {
-        width: 48px;
-        height: 48px;
+        display: block;
+        margin: 0 auto 18px auto;
+        width: 70px;
+        height: 70px;
+        max-width: 100%;
+        height: auto;
+      }
+      h1 {
+        color: #d96d1c;
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
       }
       .codigo {
-        font-size: 2rem;
+        font-size: 2.8rem;
+        font-weight: 900;
+        color: #c75b0b;
+        margin-bottom: 8px;
+        letter-spacing: 2px;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="error-container">
-    <svg class="error-icon" viewBox="0 0 64 64" fill="none">
-      <defs>
-        <linearGradient id="errorGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#fdb00a"/>
-          <stop offset="100%" stop-color="#c75b0b"/>
-        </linearGradient>
-      </defs>
-      <circle cx="32" cy="32" r="30" fill="url(#errorGrad)" opacity="0.13"/>
-      <path d="M20 20 L44 44 M44 20 L20 44" stroke="#d96d1c" stroke-width="3.5" stroke-linecap="round"/>
-      <circle cx="32" cy="32" r="12" stroke="#d96d1c" stroke-width="2.5" fill="none"/>
-    </svg>
-    <div class="codigo">500</div>
-    <h1>¡Vaya! Algo ha salido mal</h1>
-    <p>
-      Se ha producido un <strong>error interno en el servidor</strong> y no hemos podido completar tu solicitud en este momento.
-    </p>
-    <div class="detalle-error">
-      Por favor, inténtalo de nuevo en unos minutos.<br>
-      Si el problema persiste, contacta con nuestro equipo.
+      p {
+        font-size: 1.13rem;
+        margin-bottom: 18px;
+        color: #333;
+        line-height: 1.7;
+        margin-top: 0;
+      }
+      .detalle-error {
+        color: #be6404;
+        font-size: 1.04rem;
+        margin-bottom: 18px;
+        margin-top: -8px;
+      }
+      .btn-volver {
+        display: inline-block;
+        background: linear-gradient(90deg, #c75b0b 0%, #f7b500 100%);
+        color: #fff;
+        font-weight: 700;
+        padding: 12px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.08rem;
+        box-shadow: 0 2px 12px rgba(199, 91, 11, 0.1);
+        transition:
+          background 0.2s,
+          color 0.2s,
+          transform 0.15s;
+        margin-top: 10px;
+        letter-spacing: 0.5px;
+      }
+      .btn-volver:hover {
+        background: linear-gradient(90deg, #d96d1c 0%, #c75b0b 100%);
+        color: #fff;
+        transform: translateY(-2px) scale(1.04);
+      }
+      .ultima-actualizacion {
+        margin-top: 28px;
+        color: #888;
+        font-size: 0.97rem;
+        text-align: right;
+      }
+      @media (max-width: 600px) {
+        .error-container {
+          padding: 18px 4vw 18px 4vw;
+          border-radius: 20px;
+          max-width: 90vw;
+        }
+        h1 {
+          font-size: 1.3rem;
+        }
+        .error-icon {
+          width: 48px;
+          height: 48px;
+        }
+        .codigo {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <svg class="error-icon" viewBox="0 0 64 64" fill="none">
+        <defs>
+          <linearGradient id="errorGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fdb00a" />
+            <stop offset="100%" stop-color="#c75b0b" />
+          </linearGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="url(#errorGrad)" opacity="0.13" />
+        <path
+          d="M20 20 L44 44 M44 20 L20 44"
+          stroke="#d96d1c"
+          stroke-width="3.5"
+          stroke-linecap="round"
+        />
+        <circle
+          cx="32"
+          cy="32"
+          r="12"
+          stroke="#d96d1c"
+          stroke-width="2.5"
+          fill="none"
+        />
+      </svg>
+      <div class="codigo">500</div>
+      <h1>¡Vaya! Algo ha salido mal</h1>
+      <p>
+        Se ha producido un <strong>error interno en el servidor</strong> y no
+        hemos podido completar tu solicitud en este momento.
+      </p>
+      <div class="detalle-error">
+        Por favor, inténtalo de nuevo en unos minutos.<br />
+        Si el problema persiste, contacta con nuestro equipo.
+      </div>
+      <a href="index.html" class="btn-volver">← Volver al inicio</a>
+      <div class="ultima-actualizacion">Última actualización: Mayo 2025</div>
     </div>
-    <a href="index.html" class="btn-volver">← Volver al inicio</a>
-    <div class="ultima-actualizacion">Última actualización: Mayo 2025</div>
-  </div>
-</body>
+  </body>
 </html>
