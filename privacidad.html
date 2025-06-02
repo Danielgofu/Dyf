@@ -3,87 +3,154 @@
   <head>
     <meta charset="utf-8" />
     <title>Política de Privacidad | DyF Telecomunicaciones</title>
-    <!-- Favicon -->
-    <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/global.min.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet" />
     <style>
       body {
         background: linear-gradient(135deg, #c75b0b 0%, #f7b500 100%);
         color: #222;
         font-family: 'Rubik', Arial, sans-serif;
         margin: 0;
-        padding: 40px 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .privacidad-container {
-        width: 80%;
-        height: 90%;
-        justify-self: center;
+        max-width: 600px;
+        width: 95%;
         background: #fff;
         border-radius: 24px;
-        box-shadow: 0 4px 24px rgba(199, 91, 11, 0.08);
-        padding: 40px 28px;
+        box-shadow: 0 8px 32px rgba(199, 91, 11, 0.13);
+        padding: 48px 32px 32px 32px;
+        margin: 40px 0;
+        animation: fadeIn 0.7s;
+        box-sizing: border-box;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px);}
+        to { opacity: 1; transform: translateY(0);}
       }
       h1 {
         color: #d96d1c;
-        font-size: 2.2rem;
+        font-size: 2.3rem;
         margin-bottom: 18px;
         font-weight: 800;
+        letter-spacing: 0.5px;
+        text-align: center;
       }
       h2 {
         color: #c75b0b;
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         margin-top: 32px;
         margin-bottom: 10px;
+        font-weight: 700;
       }
       p,
       ul {
-        font-size: 1.05rem;
+        font-size: 1.08rem;
         color: #333;
         line-height: 1.7;
+        margin-bottom: 12px;
+      }
+      ul {
+        padding-left: 22px;
       }
       a {
         color: #d96d1c;
+        text-decoration: underline;
+        transition: color 0.2s;
+        word-break: break-all;
       }
-      /* Botón volver al inicio */
+      a:hover {
+        color: #be6404;
+      }
       .btn-volver-inicio {
         display: inline-block;
         background: linear-gradient(90deg, #c75b0b 0%, #f7b500 100%);
         color: #fff;
         font-weight: 700;
-        padding: 12px 28px;
+        padding: 13px 32px;
         border-radius: 8px;
         text-decoration: none;
         font-size: 1.08rem;
-        box-shadow: 0 2px 12px rgba(199, 91, 11, 0.08);
-        transition:
-          background 0.2s,
-          color 0.2s,
-          transform 0.15s;
-        margin-top: 12px;
+        box-shadow: 0 2px 12px rgba(199, 91, 11, 0.10);
+        transition: background 0.2s, color 0.2s, transform 0.15s;
+        margin-top: 18px;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
       }
       .btn-volver-inicio:hover {
         background: linear-gradient(90deg, #d96d1c 0%, #c75b0b 100%);
         color: #fff;
-        transform: translateY(-2px) scale(1.03);
+        transform: translateY(-2px) scale(1.04);
       }
-      @media (max-width: 600px) {
+      .ultima-actualizacion {
+        margin-top: 32px;
+        color: #888;
+        font-size: 0.97rem;
+        text-align: right;
+      }
+      .volver-inicio-container {
+        text-align: center;
+        margin-top: 36px;
+      }
+      svg {
+        display: block;
+        margin: 0 auto 18px auto;
+        width: 70px;
+        height: 70px;
+        max-width: 100%;
+        height: auto;
+      }
+      @media (max-width: 700px) {
         .privacidad-container {
-          padding: 18px 4vw;
-          border-radius: 12px;
+          padding: 28px 8vw 24px 8vw;
+          border-radius: 14px;
         }
         h1 {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
+        }
+        h2 {
+          font-size: 1.08rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .privacidad-container {
+          padding: 14px 2vw 14px 2vw;
+          border-radius: 8px;
+        }
+        h1 {
+          font-size: 1.1rem;
+        }
+        .btn-volver-inicio {
+          padding: 10px 10vw;
+          font-size: 1rem;
+        }
+        svg {
+          width: 48px;
+          height: 48px;
         }
       }
     </style>
   </head>
   <body>
     <div class="privacidad-container">
+      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="70px" height="70px" viewBox="0 0 485.213 485.212" style="enable-background:new 0 0 485.213 485.212;"
+        xml:space="preserve">
+        <g>
+          <path d="M363.908,212.282v-90.978C363.908,54.434,309.509,0,242.606,0c-66.884,0-121.302,54.434-121.302,121.304v90.978
+            c-33.498,0-60.653,27.158-60.653,60.648v151.629c0,33.5,27.155,60.653,60.653,60.653h242.604c33.491,0,60.653-27.153,60.653-60.653
+            V272.93C424.562,239.439,397.399,212.282,363.908,212.282z M257.77,359.257v50.139c0,8.382-6.781,15.163-15.163,15.163
+            c-8.382,0-15.164-6.781-15.164-15.163v-50.139c-8.9-5.269-15.161-14.57-15.161-25.673c0-16.765,13.579-30.327,30.324-30.327
+            c16.745,0,30.326,13.562,30.326,30.327C272.933,344.687,266.665,353.989,257.77,359.257z M303.255,212.282h-121.3v-90.978
+            c0-33.465,27.2-60.653,60.651-60.653c33.435,0,60.648,27.188,60.648,60.653V212.282z"
+            fill="#d96d1c"/>
+        </g>
+      </svg>
       <h1>Política de Privacidad</h1>
       <p>
         En <strong>DyF Telecomunicaciones</strong> nos comprometemos a proteger
@@ -134,8 +201,8 @@
         para fines analíticos o publicitarios. Solo se emplean cookies técnicas
         necesarias para el funcionamiento básico de la web.
       </p>
-      <p style="margin-top: 32px">Última actualización: Mayo 2025</p>
-      <div style="text-align: center; margin-top: 36px">
+      <div class="ultima-actualizacion">Última actualización: Mayo 2025</div>
+      <div class="volver-inicio-container">
         <a href="index.html" class="btn-volver-inicio">← Volver al inicio</a>
       </div>
     </div>

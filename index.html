@@ -391,7 +391,7 @@
               <div class="textoCuadro">
                 <span>
                   Alarmas y CCTV. Electricidad y Servicios de Mantenimiento.
-                  Atendemos averías y urgencias. Te envíamos un técnico
+                  Atendemos averías y urgencias. Te enviamos un técnico
                   profesional...
                 </span>
               </div>
@@ -599,7 +599,7 @@
         <div class="row">
           <!-- Información de contacto -->
           <div
-            class="col-12 col-md-6 col-lg-4 text-center text-md-start mb-4 mb-lg-0"
+            class="col-12 col-md-6 col-lg-4 text-center text-md-start mb-4 mb-lg-0 d-flex flex-column align-items-center align-items-md-start justify-content-evenly"
           >
             <a href="index.html">
               <img
@@ -622,7 +622,7 @@
               <li>
                 <i class="fas fa-envelope me-2"></i
                 ><a href="mailto:info@dyfservicios.com"
-                  >Em@il: info@dyfservicios.com</a
+                  >Email: info@dyfservicios.com</a
                 >
               </li>
               <li>
@@ -638,7 +638,7 @@
             </ul>
           </div>
           <!-- Enlaces -->
-          <div class="col-12 col-md-6 col-lg-4 text-center mb-4 mb-lg-0">
+          <div class="col-12 col-md-6 col-lg-4 text-center mb-4 mb-lg-0 d-flex flex-column align-items-center justify-content-evenly">
             <h5>Enlaces</h5>
             <ul class="list-unstyled">
               <li><a href="index.html">Inicio</a></li>
@@ -649,7 +649,7 @@
             </ul>
           </div>
           <!-- Horarios y redes -->
-          <div class="col-12 col-lg-4 text-center">
+          <div class="col-12 col-lg-4 text-center d-flex flex-column justify-content-evenly">
             <ul class="wrapper">
               <li class="icon facebook">
                 <span class="tooltip">Facebook</span>
@@ -692,6 +692,11 @@
                 >
               </li>
             </ul>
+            <ul>
+              <li>
+                  <a href="legal.html">Aviso Legal</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -719,5 +724,10 @@
       <button id="accept-cookies">Aceptar</button>
       <a href="privacidad.html">Más información</a>
     </div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
   </body>
 </html>
