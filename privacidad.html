@@ -6,7 +6,7 @@
     <!-- Favicon -->
     <link rel="icon" href="img/faviconDYF.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/global.min.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap"
       rel="stylesheet"
@@ -49,6 +49,28 @@
       a {
         color: #d96d1c;
       }
+      /* Botón volver al inicio */
+      .btn-volver-inicio {
+        display: inline-block;
+        background: linear-gradient(90deg, #c75b0b 0%, #f7b500 100%);
+        color: #fff;
+        font-weight: 700;
+        padding: 12px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.08rem;
+        box-shadow: 0 2px 12px rgba(199, 91, 11, 0.08);
+        transition:
+          background 0.2s,
+          color 0.2s,
+          transform 0.15s;
+        margin-top: 12px;
+      }
+      .btn-volver-inicio:hover {
+        background: linear-gradient(90deg, #d96d1c 0%, #c75b0b 100%);
+        color: #fff;
+        transform: translateY(-2px) scale(1.03);
+      }
       @media (max-width: 600px) {
         .privacidad-container {
           padding: 18px 4vw;
@@ -59,14 +81,6 @@
         }
       }
     </style>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-0HLCH4XF58');
-    </script>
   </head>
   <body>
     <div class="privacidad-container">
@@ -121,7 +135,10 @@
         necesarias para el funcionamiento básico de la web.
       </p>
       <p style="margin-top: 32px">Última actualización: Mayo 2025</p>
+      <div style="text-align: center; margin-top: 36px">
+        <a href="index.html" class="btn-volver-inicio">← Volver al inicio</a>
+      </div>
     </div>
-    <script src="js/global.js" defer></script>
+    <script src="js/global.min.js" defer></script>
   </body>
 </html>

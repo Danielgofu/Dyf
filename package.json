@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "minify-css": "cleancss -o css/global.min.css css/global.css",
-    "minify-js": "terser js/global.js -o js/global.min.js",
+    "minify-css": "cleancss -o css/global.min.css css/global.css && cleancss -o css/index.min.css css/index.css && cleancss -o css/contacto.min.css css/contacto.css && cleancss -o css/servicios.min.css css/servicios.css && cleancss -o css/mantenimiento.min.css css/mantenimiento.css && cleancss -o css/equipo.min.css css/equipo.css",
+    "minify-js": "terser js/global.js -o js/global.min.js && terser js/index.js -o js/index.min.js && terser js/contacto.js -o js/contacto.min.js && terser js/servicios.js -o js/servicios.min.js && terser js/mantenimiento.js -o js/mantenimiento.min.js && terser js/equipo.js -o js/equipo.min.js",
     "format": "prettier --write ."
   },
   "repository": {

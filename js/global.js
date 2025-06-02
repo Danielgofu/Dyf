@@ -5,13 +5,37 @@ window.addEventListener('load', () => {
     document.getElementById('loader-bg').style.display = 'none';
   }, 400);
 });
-// Cookies
+
+function loadGoogleAnalytics() {
+  if (window.gtagLoaded) return;
+  window.gtagLoaded = true;
+  // Crea el script de Google Analytics
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-0HLCH4XF58';
+  script.onload = function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-0HLCH4XF58');
+  };
+  document.head.appendChild(script);
+}
+
+// Banner de cookies
 if (!localStorage.getItem('cookiesAccepted')) {
   document.getElementById('cookie-banner').style.display = 'block';
+} else {
+  loadGoogleAnalytics();
 }
+
 document.getElementById('accept-cookies').onclick = function () {
   localStorage.setItem('cookiesAccepted', 'yes');
   document.getElementById('cookie-banner').style.display = 'none';
+  loadGoogleAnalytics();
 };
 
 document.addEventListener('DOMContentLoaded', () => {
