@@ -40,6 +40,11 @@ git commit -m "Minificado y formateado el código antes de subir"
 
 git push
 
+Copiar y pegar :
+npm run minify-css
+npm run minify-js
+npm run format
+
 09/05 Dia 1: Header y footer.
 12/05 Dia 2: Sidebar y ayudar a instalar NAS.
 13/05 Dia 3: Carrusel y responsibidad.
