@@ -2,7 +2,7 @@
 Desarrollo: Daniel Gómez
 Diseño web: Daniel Gómez
 Colaboradores: Equipo DyF Telecomunicaciones
-Contacto: info@dyftelecomunicaciones.com
+Contacto: info@dyfservicios.com
 
 /* SITE */
 Proyecto: DyF Telecomunicaciones
