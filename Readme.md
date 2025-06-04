@@ -62,3 +62,5 @@ npm run format
 29/05 Dia 15: Crear pagina 404.html y privacidad
 30/05 Dia 16: Instalar node.js para optimizar y limpiar el codigo
 02/06 Dia 17: Añadir cookies y minimizar todos los css y js
+03/06 Dia 18: Creada las paginas de offline, legal, y 505
+04/06 Dia 19: Añadido copyright

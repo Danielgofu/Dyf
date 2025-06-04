@@ -253,7 +253,7 @@ header {
 footer {
   background-color: #e86e10;
   color: #fff;
-  padding: 40px 0;
+  padding: 40px 0px 0px 0px;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -371,6 +371,42 @@ footer .logoCabezera:hover {
 .wrapper .instagram:hover .tooltip::before {
   background: #f56040;
   color: #000000;
+}
+/* --- Copyright Footer Mejorado --- */
+.contenedorCopyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.copyright {
+  background: linear-gradient(90deg, #181818 0%, #232323 100%);
+  color: #e0e0e0;
+  font-size: 1.04rem;
+  padding: 10px 0 6px 0;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  border-radius: 10px 10px 0 0;
+  border-top: 1.5px solid #222;
+  border-bottom: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  transition: background 0.2s;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+}
+
+.copyright strong {
+  color: #fdb00a;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 /*  ============  Loader ============  */
 #loader-bg {
@@ -579,5 +615,15 @@ footer .logoCabezera:hover {
   }
   footer ul li a {
     font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .copyright {
+    font-size: 0.95rem;
+    padding: 9px 0 5px 0;
+    border-radius: 8px 8px 0 0;
+  }
+  .contenedorCopyright {
+    margin-top: 10px;
   }
 }
