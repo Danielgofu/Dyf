@@ -179,3 +179,96 @@ window.addEventListener('load', () => {
     document.getElementById('loader-bg').style.display = 'none';
   }, 400);
 });
+// Estadísticas: los 2 primeros con números aleatorios, el tercero contador normal, todas con la misma duración
+document.addEventListener('DOMContentLoaded', () => {
+  const estadisticasSection = document.querySelector(
+    '.estadisticas-electricidad',
+  );
+  const estadisticas = document.querySelectorAll('.item-estadistica');
+  // Animación de entrada para toda la sección y cada estadística
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.from(estadisticasSection, {
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: estadisticasSection,
+        start: 'top 85%',
+        toggleActions: 'play none none reset',
+      },
+    });
+    gsap.utils.toArray(estadisticas).forEach((item, i) => {
+      gsap.from(item, {
+        opacity: 0,
+        y: 40,
+        duration: 0.7,
+        delay: 0.2 + i * 0.15,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: estadisticasSection,
+          start: 'top 85%',
+          toggleActions: 'play none none reset',
+        },
+      });
+    });
+  }
+  // Números aleatorios y contador normal
+  const valores = document.querySelectorAll('.item-estadistica .valor');
+  const duration = 1800; // ms, duración igual para todos
+  valores.forEach((el, idx) => {
+    const final = parseInt(el.getAttribute('data-valor'), 10);
+    if (idx < 2) {
+      // Números aleatorios que se acercan al valor final
+      let steps = 45;
+      let currentStep = 0;
+      function animateRandom() {
+        currentStep++;
+        let min = Math.floor(final * (currentStep / steps) * 0.7);
+        let max = Math.floor(final * (currentStep / steps));
+        let value = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (currentStep < steps) {
+          el.textContent = '+' + Math.min(value, final).toLocaleString('es-ES');
+          setTimeout(animateRandom, duration / steps);
+        } else {
+          el.textContent = '+' + final.toLocaleString('es-ES');
+        }
+      }
+      // Solo animar cuando la sección sea visible
+      if (window.gsap && window.ScrollTrigger) {
+        ScrollTrigger.create({
+          trigger: estadisticasSection,
+          start: 'top 85%',
+          once: true,
+          onEnter: animateRandom,
+        });
+      } else {
+        animateRandom();
+      }
+    } else {
+      // Contador normal para el tercero
+      let current = 0;
+      const frameRate = 1000 / 60; // 60fps
+      const increment = Math.ceil(final / (duration / frameRate));
+      function animateCount() {
+        current += increment;
+        if (current < final) {
+          el.textContent = '+' + current.toLocaleString('es-ES');
+          setTimeout(animateCount, frameRate);
+        } else {
+          el.textContent = '+' + final.toLocaleString('es-ES');
+        }
+      }
+      if (window.gsap && window.ScrollTrigger) {
+        ScrollTrigger.create({
+          trigger: estadisticasSection,
+          start: 'top 85%',
+          once: true,
+          onEnter: animateCount,
+        });
+      } else {
+        animateCount();
+      }
+    }
+  });
+});

@@ -55,12 +55,12 @@ npm run format
 20/05 Dia 8: Organizar archivos y añadir loader.
 21/05 Dia 9: Añadir redes y comienzo de pagina de contacto.
 22/05 Dia 10: Continuar con el contacto y terminarlo.
-23/05 Dia 11: Empezar con la pagina de equipo y servicios
-26/05 Dia 12: Terminar pagina servicios
-27/05 Dia 13: Hacer pagina de mantenimiento
-28/05 Dia 14: Modificar pagina de equipo
-29/05 Dia 15: Crear pagina 404.html y privacidad
-30/05 Dia 16: Instalar node.js para optimizar y limpiar el codigo
-02/06 Dia 17: Añadir cookies y minimizar todos los css y js
-03/06 Dia 18: Creada las paginas de offline, legal, y 505
-04/06 Dia 19: Añadido copyright
+23/05 Dia 11: Empezar con la pagina de equipo y servicios.
+26/05 Dia 12: Terminar pagina servicios.
+27/05 Dia 13: Hacer pagina de mantenimiento.
+28/05 Dia 14: Modificar pagina de equipo.
+29/05 Dia 15: Crear pagina 404.html y privacidad.
+30/05 Dia 16: Instalar node.js para optimizar y limpiar el codigo.
+02/06 Dia 17: Añadir cookies y minimizar todos los css y js.
+03/06 Dia 18: Creada las paginas de offline, legal, y 505.
+04/06 Dia 19: Añadido copyright y cuadro estadisticas.
