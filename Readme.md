@@ -1,66 +1,88 @@
-//Paleta colores
+# 🚀 DyF Telecomunicaciones
 
-Colores del logo -->
-#d2e2e9
-#d3dade
-#b5b6b8
-#8e9092
-#ea8a02
-#c86900
-#020201
-#be6404
-#74420f
+Bienvenido al repositorio oficial de **DyF Telecomunicaciones**  
+Soluciones profesionales en electricidad y telecomunicaciones para empresas y particulares en Madrid.
 
-Colores de la pagina -->
-Fondo negro pagina : #040000
-Fondo naranja pagina : #be6404
-Naranja de la letra : #fdb00a
+---
 
-# 1. Minificar todos los CSS
+## 📁 Estructura del proyecto
 
-npm run minify-css
+```
+DYF/
+├── css/                # Hojas de estilos CSS
+├── img/                # Imágenes y logos del sitio
+├── js/                 # Scripts JavaScript
+├── .gitignore          # Archivos/carpetas ignorados por Git
+├── .prettierrc         # Configuración de formato Prettier
+├── .prettierignore     # Archivos ignorados por Prettier
+├── 404.html            # Página de error 404 (no encontrado)
+├── 500.html            # Página de error 500 (error interno)
+├── Readme.md           # Este archivo, documentación del proyecto
+├── contacto.html       # Página de contacto
+├── equipo.html         # Página sobre el equipo de la empresa
+├── eslint.config.mjs   # Configuración de ESLint para JS
+├── gracias.html        # Página de agradecimiento tras formularios
+├── humans.txt          # Créditos y detalles humanos del proyecto
+├── index.html          # Página principal del sitio web
+├── legal.html          # Información legal y aviso legal
+├── manifest.json       # Manifest para PWA (Progressive Web App)
+├── mantenimiento.html  # Página de aviso de mantenimiento
+├── offline.html        # Página mostrada si no hay conexión
+├── package-lock.json   # Dependencias exactas de Node.js
+├── package.json        # Configuración y dependencias del proyecto Node.js
+├── privacidad.html     # Política de privacidad
+├── robots.txt          # Instrucciones para bots y buscadores
+├── servicios.html      # Página de servicios ofrecidos
+├── sitemap.xml         # Mapa del sitio para buscadores
+├── sw.js               # Service Worker para PWA y offline
+```
 
-# 2. Minificar todos los JS
+---
 
-npm run minify-js
+## 🛠️ Tecnologías principales
 
-# 3. Formatear el código con Prettier (excepto los minificados, si tienes .prettierignore)
+- **HTML5**, **CSS3**, **JavaScript**
+- [GSAP](https://greensock.com/gsap/) — animaciones fluidas
+- [Bootstrap](https://getbootstrap.com/) — responsive y grid
+- Google Fonts: Rubik, Open Sans, Oswald
+- Progressive Web App (PWA) ready
 
-npm run format
+---
 
-# 4. Añadir los cambios al commit
+## ✨ Características destacadas
 
-git add .
+- Diseño responsive y moderno
+- Animaciones suaves y estadísticas dinámicas
+- Loader personalizado y banner de cookies
+- Páginas de error y offline
+- Código optimizado y minificado para producción
 
-# 5. Escribir un mensaje de commit claro
+---
 
-git commit -m "Minificado y formateado el código antes de subir"
+## 👨‍💻 Equipo
 
-# 6. Subir los cambios a GitHub
+- **Desarrollo y diseño:** Daniel Gomez
+- **Colaboradores:** Equipo DyF Telecomunicaciones
+- **Contacto:** [info@dyfservicios.com](mailto:info@dyfservicios.com)
 
-git push
+---
 
-Copiar y pegar :
-npm run minify-css
-npm run minify-js
-npm run format
+## 🌐 Enlaces útiles
 
-09/05 Dia 1: Header y footer.
-12/05 Dia 2: Sidebar y ayudar a instalar NAS.
-13/05 Dia 3: Carrusel y responsibidad.
-14/05 Dia 4: Comienzo del main.
-15/05 Dia 5: Retocar el sidebar y añadir mas elementos al main.
-16/05 Dia 6: Cambios en el sidebar.
-19/05 Dia 7: Añadir apartados al main.
-20/05 Dia 8: Organizar archivos y añadir loader.
-21/05 Dia 9: Añadir redes y comienzo de pagina de contacto.
-22/05 Dia 10: Continuar con el contacto y terminarlo.
-23/05 Dia 11: Empezar con la pagina de equipo y servicios.
-26/05 Dia 12: Terminar pagina servicios.
-27/05 Dia 13: Hacer pagina de mantenimiento.
-28/05 Dia 14: Modificar pagina de equipo.
-29/05 Dia 15: Crear pagina 404.html y privacidad.
-30/05 Dia 16: Instalar node.js para optimizar y limpiar el codigo.
-02/06 Dia 17: Añadir cookies y minimizar todos los css y js.
-03/06 Dia 18: Creada las paginas de offline, legal, y 505.
-04/06 Dia 19: Añadido copyright y cuadro estadisticas.
+- 🌍 [Sitio web oficial](https://dyfservicios.com)
+- 👥 [humans.txt](./humans.txt)
+
+---
+
+## 📜 Licencia
+
+Este proyecto es propiedad de **DyF Telecomunicaciones**.  
+Puedes usarlo como referencia educativa o profesional, pero no está permitido su uso comercial sin autorización expresa.
+
+---
+
+## 🙌 ¡Gracias por visitar este repositorio!
+
+¿Tienes sugerencias o encuentras algún bug?  
+Abre un issue o contacta con el equipo.  
+¡Tu feedback ayuda a mejorar DyF Telecomunicaciones!
