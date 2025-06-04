@@ -208,6 +208,11 @@
         </div>
       </div>
     </div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
   </body>
   <script>
     // Redirige a la página principal después de 6 segundos

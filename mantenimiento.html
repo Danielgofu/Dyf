@@ -617,5 +617,10 @@
       <button id="accept-cookies">Aceptar</button>
       <a href="privacidad.html">Más información</a>
     </div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
   </body>
 </html>

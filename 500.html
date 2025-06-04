@@ -161,5 +161,10 @@
       <a href="index.html" class="btn-volver">← Volver al inicio</a>
       <div class="ultima-actualizacion">Última actualización: Mayo 2025</div>
     </div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
   </body>
 </html>

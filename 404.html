@@ -113,5 +113,10 @@
       </div>
       <a href="index.html" class="btn-404">Volver al inicio</a>
     </div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
   </body>
 </html>
