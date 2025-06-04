@@ -1,0 +1,19 @@
+/* TEAM */
+Desarrollo: Daniel Gómez
+Diseño web: Daniel Gómez
+Colaboradores: Equipo DyF Telecomunicaciones
+Contacto: info@dyftelecomunicaciones.com
+
+/* SITE */
+Proyecto: DyF Telecomunicaciones
+Ubicación: Getafe, Madrid, España
+Última actualización: 2025-06-04
+Tecnologías: HTML5, CSS3, JavaScript, GSAP, Bootstrap
+Fuentes: Rubik, Open Sans, Oswald
+
+/* AGRADECIMIENTOS */
+Gracias a nuestros clientes, colaboradores y marcas asociadas por confiar en DyF Telecomunicaciones.
+
+/* ENLACES */
+Web: http://dyfservicios.com
+GitHub: https://github.com/Danielgofu
